@@ -7,11 +7,10 @@ import Footer from "./components/Footer/Footer.jsx";
 
 import HomePage from "./pages/Home/HomePage.jsx";
 import MappoolPage from "./pages/Mappool/MappoolPage.jsx";
+import PlayersPage from "./pages/Players/PlayerPage.jsx";
+import RegulationsPage from "./pages/Regulations/RegulationPage.jsx";
+import AboutPage from "./pages/About/AboutPage.jsx";
 
-// ЗАГЛУШКИ: Вам нужно будет создать реальные компоненты для этих страниц
-const PlayersPage = () => <h2>Страница Участников</h2>;
-const RegulationsPage = () => <h2>Страница Регламента</h2>;
-const AboutPage = () => <h2>Страница "О турнире"</h2>;
 
 
 function App() {
