@@ -2,12 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './App.css';
-import HomePage from "./pages/HomePage/HomePage.jsx";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
+import HomePage from "./pages/Home/HomePage.jsx";
+import MappoolPage from "./pages/Mappool/MappoolPage.jsx";
+
 // ЗАГЛУШКИ: Вам нужно будет создать реальные компоненты для этих страниц
-const MappoolPage = () => <h2>Страница Маппула</h2>;
 const PlayersPage = () => <h2>Страница Участников</h2>;
 const RegulationsPage = () => <h2>Страница Регламента</h2>;
 const AboutPage = () => <h2>Страница "О турнире"</h2>;
