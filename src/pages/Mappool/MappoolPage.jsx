@@ -31,14 +31,14 @@ const MappoolPage = () => {
                     </div>
                     <div className="map-stats">
                         <div className="map-stats-left">
-                            <span><img src="/src/assets/images/icon/star.svg"/> 7.57</span>
-                            <span><img src="/src/assets/images/icon/bpm.svg"/> 208</span>
-                            <span><img src="/src/assets/images/icon/time.svg"/> 4:09</span>
+                            <span><img src="./src/assets/images/icon/star.svg"/> 7.57</span>
+                            <span><img src="./src/assets/images/icon/bpm.svg"/> 208</span>
+                            <span><img src="./src/assets/images/icon/time.svg"/> 4:09</span>
                         </div>
                         <div className="map-stats-right">
-                            <span><img src="/src/assets/images/icon/cs.svg"/> 4.2</span>
-                            <span><img src="/src/assets/images/icon/ar.svg"/> 9.8</span>
-                            <span><img src="/src/assets/images/icon/od.svg"/> 9.6</span>
+                            <span><img src="./src/assets/images/icon/cs.svg"/> 4.2</span>
+                            <span><img src="./src/assets/images/icon/ar.svg"/> 9.8</span>
+                            <span><img src="./src/assets/images/icon/od.svg"/> 9.6</span>
                         </div>
                     </div>
                 </a>
@@ -52,14 +52,14 @@ const MappoolPage = () => {
                     </div>
                     <div className="map-stats">
                         <div className="map-stats-left">
-                            <span><img src="/src/assets/images/icon/star.svg"/> 7.57</span>
-                            <span><img src="/src/assets/images/icon/bpm.svg"/> 208</span>
-                            <span><img src="/src/assets/images/icon/time.svg"/> 4:09</span>
+                            <span><img src="./src/assets/images/icon/star.svg"/> 7.57</span>
+                            <span><img src="./src/assets/images/icon/bpm.svg"/> 208</span>
+                            <span><img src="./src/assets/images/icon/time.svg"/> 4:09</span>
                         </div>
                         <div className="map-stats-right">
-                            <span><img src="/src/assets/images/icon/cs.svg"/> 4.2</span>
-                            <span><img src="/src/assets/images/icon/ar.svg"/> 9.8</span>
-                            <span><img src="/src/assets/images/icon/od.svg"/> 9.6</span>
+                            <span><img src="./src/assets/images/icon/cs.svg"/> 4.2</span>
+                            <span><img src="./src/assets/images/icon/ar.svg"/> 9.8</span>
+                            <span><img src="./src/assets/images/icon/od.svg"/> 9.6</span>
                         </div>
                     </div>
                 </a>
@@ -73,14 +73,14 @@ const MappoolPage = () => {
                     </div>
                     <div className="map-stats">
                         <div className="map-stats-left">
-                            <span><img src="/src/assets/images/icon/star.svg"/> 7.57</span>
-                            <span><img src="/src/assets/images/icon/bpm.svg"/> 208</span>
-                            <span><img src="/src/assets/images/icon/time.svg"/> 4:09</span>
+                            <span><img src="./src/assets/images/icon/star.svg"/> 7.57</span>
+                            <span><img src="./src/assets/images/icon/bpm.svg"/> 208</span>
+                            <span><img src="./src/assets/images/icon/time.svg"/> 4:09</span>
                         </div>
                         <div className="map-stats-right">
-                            <span><img src="/src/assets/images/icon/cs.svg"/> 4.2</span>
-                            <span><img src="/src/assets/images/icon/ar.svg"/> 9.8</span>
-                            <span><img src="/src/assets/images/icon/od.svg"/> 9.6</span>
+                            <span><img src="./src/assets/images/icon/cs.svg"/> 4.2</span>
+                            <span><img src="./src/assets/images/icon/ar.svg"/> 9.8</span>
+                            <span><img src="./src/assets/images/icon/od.svg"/> 9.6</span>
                         </div>
                     </div>
                 </a>
@@ -103,14 +103,14 @@ const MappoolPage = () => {
                     </div>
                     <div className="map-stats">
                         <div className="map-stats-left">
-                            <span><img src="/src/assets/images/icon/star.svg"/> 7.57</span>
-                            <span><img src="/src/assets/images/icon/bpm.svg"/> 208</span>
-                            <span><img src="/src/assets/images/icon/time.svg"/> 4:09</span>
+                            <span><img src="./src/assets/images/icon/star.svg"/> 7.57</span>
+                            <span><img src="./src/assets/images/icon/bpm.svg"/> 208</span>
+                            <span><img src="./src/assets/images/icon/time.svg"/> 4:09</span>
                         </div>
                         <div className="map-stats-right">
-                            <span><img src="/src/assets/images/icon/cs.svg"/> 4.2</span>
-                            <span><img src="/src/assets/images/icon/ar.svg"/> 9.8</span>
-                            <span><img src="/src/assets/images/icon/od.svg"/> 9.6</span>
+                            <span><img src="./src/assets/images/icon/cs.svg"/> 4.2</span>
+                            <span><img src="./src/assets/images/icon/ar.svg"/> 9.8</span>
+                            <span><img src="./src/assets/images/icon/od.svg"/> 9.6</span>
                         </div>
                     </div>
                 </a>
@@ -124,14 +124,14 @@ const MappoolPage = () => {
                     </div>
                     <div className="map-stats">
                         <div className="map-stats-left">
-                            <span><img src="/src/assets/images/icon/star.svg"/> 7.57</span>
-                            <span><img src="/src/assets/images/icon/bpm.svg"/> 208</span>
-                            <span><img src="/src/assets/images/icon/time.svg"/> 4:09</span>
+                            <span><img src="./src/assets/images/icon/star.svg"/> 7.57</span>
+                            <span><img src="./src/assets/images/icon/bpm.svg"/> 208</span>
+                            <span><img src="./src/assets/images/icon/time.svg"/> 4:09</span>
                         </div>
                         <div className="map-stats-right">
-                            <span><img src="/src/assets/images/icon/cs.svg"/> 4.2</span>
-                            <span><img src="/src/assets/images/icon/ar.svg"/> 9.8</span>
-                            <span><img src="/src/assets/images/icon/od.svg"/> 9.6</span>
+                            <span><img src="./src/assets/images/icon/cs.svg"/> 4.2</span>
+                            <span><img src="./src/assets/images/icon/ar.svg"/> 9.8</span>
+                            <span><img src="./src/assets/images/icon/od.svg"/> 9.6</span>
                         </div>
                     </div>
                 </a>
@@ -145,14 +145,14 @@ const MappoolPage = () => {
                     </div>
                     <div className="map-stats">
                         <div className="map-stats-left">
-                            <span><img src="/src/assets/images/icon/star.svg"/> 7.57</span>
-                            <span><img src="/src/assets/images/icon/bpm.svg"/> 208</span>
-                            <span><img src="/src/assets/images/icon/time.svg"/> 4:09</span>
+                            <span><img src="./src/assets/images/icon/star.svg"/> 7.57</span>
+                            <span><img src="./src/assets/images/icon/bpm.svg"/> 208</span>
+                            <span><img src="./src/assets/images/icon/time.svg"/> 4:09</span>
                         </div>
                         <div className="map-stats-right">
-                            <span><img src="/src/assets/images/icon/cs.svg"/> 4.2</span>
-                            <span><img src="/src/assets/images/icon/ar.svg"/> 9.8</span>
-                            <span><img src="/src/assets/images/icon/od.svg"/> 9.6</span>
+                            <span><img src="./src/assets/images/icon/cs.svg"/> 4.2</span>
+                            <span><img src="./src/assets/images/icon/ar.svg"/> 9.8</span>
+                            <span><img src="./src/assets/images/icon/od.svg"/> 9.6</span>
                         </div>
                     </div>
                 </a>
@@ -175,14 +175,14 @@ const MappoolPage = () => {
                     </div>
                     <div className="map-stats">
                         <div className="map-stats-left">
-                            <span><img src="/src/assets/images/icon/star.svg"/> 7.57</span>
-                            <span><img src="/src/assets/images/icon/bpm.svg"/> 208</span>
-                            <span><img src="/src/assets/images/icon/time.svg"/> 4:09</span>
+                            <span><img src="./src/assets/images/icon/star.svg"/> 7.57</span>
+                            <span><img src="./src/assets/images/icon/bpm.svg"/> 208</span>
+                            <span><img src="./src/assets/images/icon/time.svg"/> 4:09</span>
                         </div>
                         <div className="map-stats-right">
-                            <span><img src="/src/assets/images/icon/cs.svg"/> 4.2</span>
-                            <span><img src="/src/assets/images/icon/ar.svg"/> 9.8</span>
-                            <span><img src="/src/assets/images/icon/od.svg"/> 9.6</span>
+                            <span><img src="../src/assets/images/icon/cs.svg"/> 4.2</span>
+                            <span><img src="../src/assets/images/icon/ar.svg"/> 9.8</span>
+                            <span><img src="../src/assets/images/icon/od.svg"/> 9.6</span>
                         </div>
                     </div>
                 </a>
@@ -196,14 +196,14 @@ const MappoolPage = () => {
                     </div>
                     <div className="map-stats">
                         <div className="map-stats-left">
-                            <span><img src="/src/assets/images/icon/star.svg"/> 7.57</span>
-                            <span><img src="/src/assets/images/icon/bpm.svg"/> 208</span>
-                            <span><img src="/src/assets/images/icon/time.svg"/> 4:09</span>
+                            <span><img src="./src/assets/images/icon/star.svg"/> 7.57</span>
+                            <span><img src="./src/assets/images/icon/bpm.svg"/> 208</span>
+                            <span><img src="./src/assets/images/icon/time.svg"/> 4:09</span>
                         </div>
                         <div className="map-stats-right">
-                            <span><img src="/src/assets/images/icon/cs.svg"/> 4.2</span>
-                            <span><img src="/src/assets/images/icon/ar.svg"/> 9.8</span>
-                            <span><img src="/src/assets/images/icon/od.svg"/> 9.6</span>
+                            <span><img src="./src/assets/images/icon/cs.svg"/> 4.2</span>
+                            <span><img src="./src/assets/images/icon/ar.svg"/> 9.8</span>
+                            <span><img src="./src/assets/images/icon/od.svg"/> 9.6</span>
                         </div>
                     </div>
                 </a>
@@ -217,14 +217,14 @@ const MappoolPage = () => {
                     </div>
                     <div className="map-stats">
                         <div className="map-stats-left">
-                            <span><img src="/src/assets/images/icon/star.svg"/> 7.57</span>
-                            <span><img src="/src/assets/images/icon/bpm.svg"/> 208</span>
-                            <span><img src="/src/assets/images/icon/time.svg"/> 4:09</span>
+                            <span><img src="./src/assets/images/icon/star.svg"/> 7.57</span>
+                            <span><img src="./src/assets/images/icon/bpm.svg"/> 208</span>
+                            <span><img src="./src/assets/images/icon/time.svg"/> 4:09</span>
                         </div>
                         <div className="map-stats-right">
-                            <span><img src="/src/assets/images/icon/cs.svg"/> 4.2</span>
-                            <span><img src="/src/assets/images/icon/ar.svg"/> 9.8</span>
-                            <span><img src="/src/assets/images/icon/od.svg"/> 9.6</span>
+                            <span><img src="./src/assets/images/icon/cs.svg"/> 4.2</span>
+                            <span><img src="./src/assets/images/icon/ar.svg"/> 9.8</span>
+                            <span><img src="./src/assets/images/icon/od.svg"/> 9.6</span>
                         </div>
                     </div>
                 </a>
@@ -247,14 +247,14 @@ const MappoolPage = () => {
                     </div>
                     <div className="map-stats">
                         <div className="map-stats-left">
-                            <span><img src="/src/assets/images/icon/star.svg"/> 7.57</span>
-                            <span><img src="/src/assets/images/icon/bpm.svg"/> 208</span>
-                            <span><img src="/src/assets/images/icon/time.svg"/> 4:09</span>
+                            <span><img src="./src/assets/images/icon/star.svg"/> 7.57</span>
+                            <span><img src="./src/assets/images/icon/bpm.svg"/> 208</span>
+                            <span><img src="./src/assets/images/icon/time.svg"/> 4:09</span>
                         </div>
                         <div className="map-stats-right">
-                            <span><img src="/src/assets/images/icon/cs.svg"/> 4.2</span>
-                            <span><img src="/src/assets/images/icon/ar.svg"/> 9.8</span>
-                            <span><img src="/src/assets/images/icon/od.svg"/> 9.6</span>
+                            <span><img src="./src/assets/images/icon/cs.svg"/> 4.2</span>
+                            <span><img src="./src/assets/images/icon/ar.svg"/> 9.8</span>
+                            <span><img src="./src/assets/images/icon/od.svg"/> 9.6</span>
                         </div>
                     </div>
                 </a>
@@ -268,14 +268,14 @@ const MappoolPage = () => {
                     </div>
                     <div className="map-stats">
                         <div className="map-stats-left">
-                            <span><img src="/src/assets/images/icon/star.svg"/> 7.57</span>
-                            <span><img src="/src/assets/images/icon/bpm.svg"/> 208</span>
-                            <span><img src="/src/assets/images/icon/time.svg"/> 4:09</span>
+                            <span><img src="./src/assets/images/icon/star.svg"/> 7.57</span>
+                            <span><img src="./src/assets/images/icon/bpm.svg"/> 208</span>
+                            <span><img src="./src/assets/images/icon/time.svg"/> 4:09</span>
                         </div>
                         <div className="map-stats-right">
-                            <span><img src="/src/assets/images/icon/cs.svg"/> 4.2</span>
-                            <span><img src="/src/assets/images/icon/ar.svg"/> 9.8</span>
-                            <span><img src="/src/assets/images/icon/od.svg"/> 9.6</span>
+                            <span><img src="./src/assets/images/icon/cs.svg"/> 4.2</span>
+                            <span><img src="./src/assets/images/icon/ar.svg"/> 9.8</span>
+                            <span><img src="./src/assets/images/icon/od.svg"/> 9.6</span>
                         </div>
                     </div>
                 </a>
@@ -289,14 +289,14 @@ const MappoolPage = () => {
                     </div>
                     <div className="map-stats">
                         <div className="map-stats-left">
-                            <span><img src="/src/assets/images/icon/star.svg"/> 7.57</span>
-                            <span><img src="/src/assets/images/icon/bpm.svg"/> 208</span>
-                            <span><img src="/src/assets/images/icon/time.svg"/> 4:09</span>
+                            <span><img src="./src/assets/images/icon/star.svg"/> 7.57</span>
+                            <span><img src="./src/assets/images/icon/bpm.svg"/> 208</span>
+                            <span><img src="./src/assets/images/icon/time.svg"/> 4:09</span>
                         </div>
                         <div className="map-stats-right">
-                            <span><img src="/src/assets/images/icon/cs.svg"/> 4.2</span>
-                            <span><img src="/src/assets/images/icon/ar.svg"/> 9.8</span>
-                            <span><img src="/src/assets/images/icon/od.svg"/> 9.6</span>
+                            <span><img src="./src/assets/images/icon/cs.svg"/> 4.2</span>
+                            <span><img src="./src/assets/images/icon/ar.svg"/> 9.8</span>
+                            <span><img src="./src/assets/images/icon/od.svg"/> 9.6</span>
                         </div>
                     </div>
                 </a>
