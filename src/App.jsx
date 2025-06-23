@@ -2,14 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './App.css';
-import Navbar from "./components/Navbar/Navbar.jsx";
-import Footer from "./components/Footer/Footer.jsx";
+import Navbar from "/src/components/Navbar/Navbar.jsx";
+import Footer from "/src/components/Footer/Footer.jsx";
 
-import HomePage from "./pages/Home/HomePage.jsx";
-import MappoolPage from "./pages/Mappool/MappoolPage.jsx";
-import PlayersPage from "./pages/Players/PlayerPage.jsx";
-import RegulationsPage from "./pages/Regulations/RegulationPage.jsx";
-import AboutPage from "./pages/About/AboutPage.jsx";
+import HomePage from "/src/pages/Home/HomePage.jsx";
+import MappoolPage from "/src/pages/Mappool/MappoolPage.jsx";
+import PlayersPage from "/src/pages/Players/PlayerPage.jsx";
+import RegulationsPage from "/src/pages/Regulations/RegulationPage.jsx";
+import AboutPage from "/src/pages/About/AboutPage.jsx";
 
 
 
