@@ -1,0 +1,32 @@
+nav{
+    height: 7.6vh;
+}
+.navbar-menu{
+    background: rgba(102, 154, 226, .5);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-menu ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+.navbar-menu ul li a{
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.navbar-menu ul li a::after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: #FFFFFF;
+    transition: width 0.3s ease-in-out;
+}
+.navbar-menu ul li a:hover:after,
+.navbar-menu ul li a:focus:after {
+    width: 100%;
+}
