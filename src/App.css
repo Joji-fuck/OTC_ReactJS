@@ -6,8 +6,8 @@
 }
 #root {
   color: #ffffff;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./assets/images/danze_eat.gif") no-repeat;
+  /*background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./assets/images/danze_eat.gif") no-repeat;*/
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./assets/images/bg.gif") no-repeat;
   background-size: cover;
   min-height: 100vh;
   overscroll-behavior: none;
