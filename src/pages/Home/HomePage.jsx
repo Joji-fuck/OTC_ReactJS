@@ -10,7 +10,7 @@ const HomePage = () => {
         <img src={OsuButton} alt="Запись" />
       </a>
       <div className="registration-right">
-        <img className="registration-stesha" src={Stesha} alt="Маскот" />
+        <img className="registration-stesha" src={Stesha} alt="Маскот" width={1042}/>
       </div>
     </section>
   );
