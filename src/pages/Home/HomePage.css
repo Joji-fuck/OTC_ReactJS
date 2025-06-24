@@ -23,8 +23,7 @@ main {
 }
 .registration-btn img:hover {
   transition: 0.3s;
-  width: 600px;
-  height: 600px;
+  transform: scale(1.1);
 }
 .registration-btn span {
   font-size: 72px;
@@ -61,7 +60,7 @@ main {
   }
   .registration-btn img:hover {
     transition: 0.3s;
-    width: 300px;
+    width: 200px;
     height: 300px;
   }
 }
