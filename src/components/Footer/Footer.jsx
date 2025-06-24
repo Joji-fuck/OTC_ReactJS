@@ -7,7 +7,6 @@ import Twitch from "../../assets/images/socials/twitch.svg";
 const Footer = () => {
   return (
     <footer>
-      {/* ауъа сосал */}
       <div className="social-links">
         <a
           href="https://t.me/osutyumencup"
@@ -17,7 +16,7 @@ const Footer = () => {
           <img src={Telegram} alt="Telegram" />
         </a>
         <a
-          href="https://t.me/osutyumencup"
+          href="https://discord.gg/ShGd9zf7e4"
           target="blank"
           rel="noopener noreferrer"
         >

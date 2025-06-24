@@ -10,7 +10,18 @@
     url("./assets/images/danze_eat.gif") no-repeat;
   background-size: cover;
   min-height: 100vh;
+  overscroll-behavior: none;
+  position: relative;
 }
 a {
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  #root {
+    background-size: cover;
+    background-position: center;
+    overflow-y: auto;
+    height: 100vh;
+    -webkit-overflow-scrolling: touch;
+  }
 }

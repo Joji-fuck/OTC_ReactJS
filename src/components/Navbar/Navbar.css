@@ -1,32 +1,115 @@
-nav{
-    height: 7.6vh;
+nav {
+  height: 7.6vh;
 }
-.navbar-menu{
-    background: rgba(102, 154, 226, .5);
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.burger-menu {
+  scale: 0%;
 }
-.navbar-menu ul{
-    display: flex;
-    list-style: none;
-    gap: 50px;
+.navbar-menu {
+  background: rgba(102, 154, 226, 0.5);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.navbar-menu ul li a{
-    font-size: 18px;
-    color: #FFFFFF;
-    text-decoration: none;
+.navbar-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+.navbar-menu ul li a {
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
 }
 .navbar-menu ul li a::after {
-    display: block;
-    content: "";
-    height: 2px;
-    width: 0;
-    background-color: #FFFFFF;
-    transition: width 0.3s ease-in-out;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out;
 }
 .navbar-menu ul li a:hover:after,
 .navbar-menu ul li a:focus:after {
-    width: 100%;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    justify-content: flex-end;
+    padding: 0 20px;
+  }
+
+  .burger-menu {
+    scale: 100%;
+    display: flex;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .burger-menu span {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+  }
+
+  .burger-menu.open span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .burger-menu.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.open span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .burger-menu.fixed {
+    position: fixed;
+  }
+
+  .navbar-menu ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(102, 154, 226, 0.95);
+    z-index: 1000;
+
+    /* Анимация появления */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+
+    /* Центрирование меню */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 30px;
+    gap: 30px;
+  }
+
+  .navbar-menu ul.nav-open {
+    transform: translateX(0);
+  }
+
+  .navbar-menu ul li a {
+    font-size: 24px;
+    padding: 15px 30px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+  }
+
+  .navbar-menu ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
 }

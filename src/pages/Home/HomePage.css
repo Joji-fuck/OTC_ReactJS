@@ -1,53 +1,86 @@
-main{
-    min-height: 87vh;
+main {
+  min-height: 87vh;
 }
-.registration{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
+.registration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
 }
-.registration-btn img{
-    border-radius: 50%;
-    box-shadow: 0 0 50px white;
-    animation: button-rotate .3s infinite;
+.registration-btn img {
+  border-radius: 50%;
+  box-shadow: 0 0 50px white;
+  animation: button-rotate 0.3s infinite;
 }
-.registration-btn img{
-    position: relative;
-    left: 60px;
-    width: 550px;
-    height: 550px;
-    transition: .3s;
+.registration-btn img {
+  position: relative;
+  left: 60px;
+  width: 550px;
+  height: 550px;
+  transition: 0.3s;
 }
-.registration-btn img:hover{
-    transition: .3s;
-    width: 600px;
-    height: 600px;
+.registration-btn img:hover {
+  transition: 0.3s;
+  width: 600px;
+  height: 600px;
 }
-.registration-btn span{
-    font-size: 72px;
-    text-align: center;
-    color: #FFFFFF;
-    font-weight: 700;
+.registration-btn span {
+  font-size: 72px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
 }
-.registration-right{
-    display: flex;
-    align-items: end;
-    height: 98%;
+.registration-right {
+  display: flex;
+  align-items: end;
+  height: 98%;
 }
-.registration-stesha{
-    height: 97%;
-    z-index: 3;
-    position: relative;
-    top: -1px;
+.registration-stesha {
+  height: 97%;
+  z-index: 3;
+  position: relative;
+  top: -1px;
 }
 @keyframes button-rotate {
-    50% {
-        transform: scale(1.009);
-    }
-    100%{
-        transform: scale(1);
-    }
+  50% {
+    transform: scale(1.009);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 1564px) {
+  .registration-stesha {
+    display: none;
+  }
+  .registration {
+    height: 86.15vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .registration-btn img {
+    width: 280px;
+    height: 280px;
+    left: 0;
+  }
+  .registration-btn span {
+    font-size: 36px;
+  }
+  .registration-stesha,
+  .registration-right {
+    display: none;
+  }
+  .registration {
+    flex-direction: column;
+    justify-content: center;
+    height: 87vh;
+  }
+
+  .registration-btn {
+    text-align: center;
+  }
 }
