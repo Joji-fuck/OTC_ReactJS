@@ -59,9 +59,10 @@ main {
   .registration {
     height: 86.15vh;
   }
-  .registration-btn img:active, .registration-btn img:focus {
-    transform: scale(1.2);
+  .registration-btn img:hover {
     transition: 0.3s;
+    width: 300px;
+    height: 300px;
   }
 }
 
