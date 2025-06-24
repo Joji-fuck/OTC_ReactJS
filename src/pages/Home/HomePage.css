@@ -58,11 +58,6 @@ main {
   .registration {
     height: 86.15vh;
   }
-  .registration-btn img:hover {
-    transition: 0.3s;
-    width: 200px;
-    height: 300px;
-  }
 }
 
 @media (max-width: 768px) {
