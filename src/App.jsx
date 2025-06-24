@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer.jsx";
 
 import HomePage from "./pages/Home/HomePage.jsx";
 import MappoolPage from "./pages/Mappool/MappoolPage.jsx";
-import PlayersPage from "./pages/Players/PlayerPage.jsx";
+import PlayersPage from "./pages/Players/PlayersPage.jsx";
 import RegulationsPage from "./pages/Regulations/RegulationPage.jsx";
 import AboutPage from "./pages/About/AboutPage.jsx";
 

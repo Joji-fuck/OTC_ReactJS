@@ -1,0 +1,54 @@
+/* src/components/player-card/PlayerCard.css */
+.player-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.player-card.loading,
+.player-card.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    color: #666;
+}
+
+.player-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.player-name {
+    margin: 10px 0;
+    color: #333;
+}
+
+.player-stats {
+    margin-top: 15px;
+}
+
+.stat {
+    margin: 5px 0;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 14px;
+}
+
+.stat-value {
+    color: #333;
+    font-weight: bold;
+    margin-left: 5px;
+}

@@ -299,13 +299,13 @@ const MappoolPage = () => {
             </div>
             <div className="map-stats-right">
               <span>
-                <img src=".../../assets/images/icon/cs.svg" /> 4.2
+                <img src={CS} /> 4.2
               </span>
               <span>
-                <img src=".../../assets/images/icon/ar.svg" /> 9.8
+                <img src={AR} /> 9.8
               </span>
               <span>
-                <img src=".../../assets/images/icon/od.svg" /> 9.6
+                <img src={OD} /> 9.6
               </span>
             </div>
           </div>
