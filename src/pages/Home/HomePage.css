@@ -6,7 +6,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 87vh;
+  height: 100%;
   margin: 0 auto;
 }
 .registration-btn img {
@@ -38,7 +38,6 @@ main {
   height: 98%;
 }
 .registration-stesha {
-  display: none;
   height: 97%;
   z-index: 3;
   position: relative;
@@ -50,6 +49,15 @@ main {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 1564px) {
+  .registration-stesha {
+    display: none;
+  }
+  .registration {
+    height: 86.15vh;
   }
 }
 
