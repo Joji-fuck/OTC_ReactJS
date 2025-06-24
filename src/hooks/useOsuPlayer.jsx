@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useCallback } from 'react';
 
 export const useOsuPlayer = (playerId) => {
@@ -7,11 +6,7 @@ export const useOsuPlayer = (playerId) => {
     const [error, setError] = useState(null);
 
     const fetchPlayer = useCallback(async () => {
-        if (!playerId) {
-            setPlayer(null);
-            setLoading(false);
-            return;
-        }
+        if (!playerId) return;
 
         setLoading(true);
         setError(null);
@@ -28,8 +23,7 @@ export const useOsuPlayer = (playerId) => {
             setPlayer(data);
         } catch (err) {
             console.error('Error fetching player:', err);
-            setError(err.message || 'Failed to fetch player data');
-            setPlayer(null);
+            setError(err.message);
         } finally {
             setLoading(false);
         }

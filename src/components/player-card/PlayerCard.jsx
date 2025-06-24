@@ -15,7 +15,11 @@ const PlayerCard = ({ playerId }) => {
     }
 
     return (
-        <div className="player-card">
+        <a
+            href={`https://osu.ppy.sh/users/${playerId}`}
+            className="player-card"
+            target="_blank"
+            rel="noopener noreferrer">
             <img
                 src={player.avatar_url}
                 alt={player.username}
@@ -32,7 +36,7 @@ const PlayerCard = ({ playerId }) => {
                     <span className="stat-value">#{player.country_rank?.toLocaleString() || 'N/A'}</span>
                 </div>
             </div>
-        </div>
+        </a>
     );
 };
 
