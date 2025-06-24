@@ -1,7 +1,7 @@
 import React from "react";
 import "./HomePage.css";
 import OsuButton from "../../assets/images/OsuButton.png";
-import Stesha from "../../assets/images/Stesha.png";
+import Stesha from "../../assets/images/Stesha-2.png";
 
 const HomePage = () => {
   return (
