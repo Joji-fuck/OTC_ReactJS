@@ -1,21 +1,54 @@
-import React from "react";
-import {Link} from 'react-router-dom';
-import './Navbar.css';
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
-    return (
-        <nav>
-            <section className="navbar-menu">
-                <ul>
-                    <li><Link to='/'>Главная</Link></li>
-                    <li><Link to='/mappool'>Маппул</Link></li>
-                    <li><Link to='/players'>Участники</Link></li>
-                    <li><Link to='/regulations'>Регламент</Link></li>
-                    <li><Link to='/about'>О турнире</Link></li>
-                </ul>
-            </section>
-        </nav>
-    );
-}
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <nav>
+      <section className="navbar-menu">
+        <button
+          className={`burger-menu ${isOpen ? "open fixed" : ""}`}
+          onClick={toggleMenu}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul className={isOpen ? "nav-open" : ""}>
+          <li>
+            <Link to="/" onClick={toggleMenu}>
+              Главная
+            </Link>
+          </li>
+          <li>
+            <Link to="/mappool" onClick={toggleMenu}>
+              Маппул
+            </Link>
+          </li>
+          <li>
+            <Link to="/players" onClick={toggleMenu}>
+              Участники
+            </Link>
+          </li>
+          <li>
+            <Link to="/regulations" onClick={toggleMenu}>
+              Регламент
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" onClick={toggleMenu}>
+              О турнире
+            </Link>
+          </li>
+        </ul>
+      </section>
+    </nav>
+  );
+};
 export default Navbar;

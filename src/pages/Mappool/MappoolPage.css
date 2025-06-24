@@ -137,3 +137,56 @@
   flex-direction: column;
   justify-content: space-evenly;
 }
+@media (max-width: 768px) {
+  .mappool-h1 {
+    font-size: 1.5em;
+    margin: 15px 0;
+  }
+
+  .summary {
+    font-size: 18px;
+    padding: 15px 0 0 15px;
+    height: 40px;
+  }
+
+  .map-card {
+    flex-direction: column;
+    width: 100%;
+    margin: 8px auto;
+  }
+
+  .map-img {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .map-mode {
+    width: 100%;
+    transform: none;
+    font-size: 24px;
+    padding: 10px 0;
+  }
+
+  .map-stats {
+    width: 100%;
+    gap: 10px;
+    height: auto;
+    padding: 15px 0;
+  }
+
+  .map-stats-left,
+  .map-stats-right {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .map-stats span {
+    font-size: 14px;
+  }
+
+  .map-stats img {
+    width: 16px;
+    height: 16px;
+  }
+}
