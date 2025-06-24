@@ -76,6 +76,11 @@ main {
     height: 280px;
     left: 0;
   }
+  .registration-btn img:focus {
+    width: 380px;
+    height: 380px;
+    left: 0;
+  }
   .registration-btn span {
     font-size: 36px;
   }
