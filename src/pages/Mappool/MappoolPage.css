@@ -20,6 +20,7 @@
 }
 
 .details:not([open]) .map-card {
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   animation: fadeOutDown 0.3s ease-in forwards;
 }
 
@@ -33,6 +34,7 @@
     transform: translateY(-20px);
   }
 }
+
 .summary {
   height: 50px;
   padding: 20px 0 0 20px;
@@ -44,10 +46,6 @@
 .summary:hover {
   cursor: pointer;
 }
-/*.summary-white{*/
-/*    color: black;*/
-/*    background: #ffffff;*/
-/*}*/
 .summary-blue {
   background: #669ae2;
 }
