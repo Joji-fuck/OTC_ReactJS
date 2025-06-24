@@ -21,10 +21,6 @@ main {
   height: 550px;
   transition: 0.3s;
 }
-.registration-btn img:hover {
-  transition: 0.3s;
-  transform: scale(1.1);
-}
 .registration-btn span {
   font-size: 72px;
   text-align: center;
@@ -42,6 +38,13 @@ main {
   position: relative;
   top: -1px;
 }
+@media (hover: hover) {
+  .registration-btn img:hover{
+    transition: 0.3s;
+    width: 40rem;
+    height: 40rem;
+  }
+}
 @keyframes button-rotate {
   50% {
     transform: scale(1.009);
@@ -58,6 +61,8 @@ main {
   .registration {
     height: 86.15vh;
   }
+}
+@media (max-width: 1564px) and (hover:hover) {
   .registration-btn img:hover {
     transition: 0.3s;
     width: 500px;
