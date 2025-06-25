@@ -1,5 +1,8 @@
 .mappool {
   min-height: 83.3vh;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .mappool-h1 {
   text-align: left;
