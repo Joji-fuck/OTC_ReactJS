@@ -14,7 +14,6 @@ import StaffPage from "./pages/Staff/StaffPage.jsx";
 
 function App() {
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     if (document.readyState === "complete") {
       setLoading(false);
@@ -24,7 +23,6 @@ function App() {
       return () => window.removeEventListener("load", handleLoad);
     }
   }, []);
-
   useEffect(() => {
     const handleMouseMove = (e) => {
       const x = (e.clientX / window.innerWidth - 0.5) * 50;
@@ -54,8 +52,5 @@ function App() {
     </Router>
   );
 }
-
 export default App;
-{
-  /*auъa sosal*/
-}
+
