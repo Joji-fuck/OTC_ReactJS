@@ -33,10 +33,32 @@ nav {
 .navbar-menu ul li a:focus:after {
   width: 100%;
 }
-
+.social-link {
+  display: none;
+}
 @media (max-width: 768px) {
+  .social-link {
+    display: flex;
+    position: relative;
+    gap: 15px;
+    order: 1;
+  }
+
+  .social-link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s ease;
+  }
+  .social-link img {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0.9);
+  }
   .navbar-menu {
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 0 20px;
   }
 
@@ -50,6 +72,7 @@ nav {
     padding: 10px;
     position: relative;
     z-index: 1001;
+    order: 2;
   }
 
   .burger-menu span {
@@ -74,6 +97,7 @@ nav {
 
   .burger-menu.fixed {
     position: fixed;
+    right: 20px;
   }
 
   .navbar-menu ul {
@@ -108,5 +132,4 @@ nav {
     border-radius: 8px;
     transition: background 0.2s ease;
   }
-
 }

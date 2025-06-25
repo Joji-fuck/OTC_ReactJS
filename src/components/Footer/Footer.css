@@ -50,21 +50,6 @@ footer p {
 }
 @media (max-width: 768px) {
   footer {
-    min-height: 7vh;
-    padding: 5px 15px;
-  }
-
-  .social-links {
-    gap: 20px;
-  }
-
-  .social-links a {
-    width: 40px;
-    height: 40px;
-  }
-
-  .social-links img {
-    width: 28px;
-    height: 28px;
+    display: none;
   }
 }
