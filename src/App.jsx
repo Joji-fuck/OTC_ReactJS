@@ -56,3 +56,6 @@ function App() {
 }
 
 export default App;
+{
+  /*auъa sosal*/
+}
