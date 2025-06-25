@@ -54,7 +54,7 @@ main {
   }
 }
 
-@media (max-width: 1564px) {
+@media (max-width: 1600px) {
   .registration-stesha {
     display: none;
   }
@@ -62,7 +62,7 @@ main {
     height: 86.15vh;
   }
 }
-@media (max-width: 1564px) and (hover: hover) {
+@media (max-width: 1600px) and (hover: hover) {
   .registration-btn img:hover {
     transition: 0.3s;
     width: 500px;
