@@ -6,7 +6,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 0px 20px;
-  position: relative;
+  margin-top: auto;
 }
 
 .social-links {
@@ -31,14 +31,6 @@ footer {
   width: 25px;
   height: 25px;
   filter: brightness(0.9);
-}
-footer p {
-  color: #ffffff;
-  text-align: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
 }
 @media (max-width: 768px) {
   footer {

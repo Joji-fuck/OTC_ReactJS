@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./MappoolPage.css";
 
 import Star from "../../assets/images/icon/star.svg";
@@ -10,9 +10,13 @@ import OD from "../../assets/images/icon/od.svg";
 
 const MappoolPage = () => {
   const [openDetails, setOpenDetails] = useState(null);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleToggle = (modType) => {
+    if (isAnimating) return;
+    setIsAnimating(true);
     setOpenDetails(openDetails === modType ? null : modType);
+    setTimeout(() => setIsAnimating(false), 600);
   };
 
   const handleMapClick = (e) => {
@@ -22,502 +26,492 @@ const MappoolPage = () => {
   return (
     <section className="mappool">
       <summary className="zip-maps">
-        <a href="#" className="arrows">
-          ◄
-        </a>
-        <h1>STAGE SELECT</h1>
-        <a href="#" className="arrows">
-          ►
-        </a>
         <a href="#" className="download-zip">
           Скачать зип-файл
         </a>
       </summary>
       <h1 className="mappool-h1">Маппул</h1>
-      <details
-        className="details"
-        open={openDetails === "nm"}
-        onClick={(e) => {
-          e.preventDefault();
-          handleToggle("nm");
-        }}
-      >
-        <summary className="summary summary-blue">Nomod</summary>
-        <a
-          className="map-card map-card-blue"
-          href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
-          onClick={handleMapClick}
+      <div className={`details ${openDetails === "nm" ? "open" : ""}`}>
+        <div
+          className="summary summary-blue"
+          onClick={() => handleToggle("nm")}
         >
-          <div className="map-img">
-            <h2>Phalanx</h2>
-            <h3>USAO</h3>
-          </div>
-          <div className="map-mode">
-            <p>NM1</p>
-          </div>
-          <div className="map-stats">
-            <div className="map-stats-left">
-              <span>
-                <img src={Star} /> 7.57
-              </span>
-              <span>
-                <img src={Bpm} /> 208
-              </span>
-              <span>
-                <img src={Time} /> 4:09
-              </span>
+          Nomod
+        </div>
+        <div className="content">
+          <a
+            className="map-card map-card-blue"
+            href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
+            onClick={handleMapClick}
+          >
+            <div className="map-img">
+              <h2>Phalanx</h2>
+              <h3>USAO</h3>
             </div>
-            <div className="map-stats-right">
-              <span>
-                <img src={CS} /> 4.2
-              </span>
-              <span>
-                <img src={AR} /> 9.8
-              </span>
-              <span>
-                <img src={OD} /> 9.6
-              </span>
+            <div className="map-mode">
+              <p>NM1</p>
             </div>
-          </div>
-        </a>
-        <a
-          className="map-card map-card-blue"
-          href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
-          onClick={handleMapClick}
+            <div className="map-stats">
+              <div className="map-stats-left">
+                <span>
+                  <img src={Star} /> 7.57
+                </span>
+                <span>
+                  <img src={Bpm} /> 208
+                </span>
+                <span>
+                  <img src={Time} /> 4:09
+                </span>
+              </div>
+              <div className="map-stats-right">
+                <span>
+                  <img src={CS} /> 4.2
+                </span>
+                <span>
+                  <img src={AR} /> 9.8
+                </span>
+                <span>
+                  <img src={OD} /> 9.6
+                </span>
+              </div>
+            </div>
+          </a>
+          <a
+            className="map-card map-card-blue"
+            href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
+            onClick={handleMapClick}
+          >
+            <div className="map-img">
+              <h2>Phalanx</h2>
+              <h3>USAO</h3>
+            </div>
+            <div className="map-mode">
+              <p>NM2</p>
+            </div>
+            <div className="map-stats">
+              <div className="map-stats-left">
+                <span>
+                  <img src={Star} /> 7.57
+                </span>
+                <span>
+                  <img src={Bpm} /> 208
+                </span>
+                <span>
+                  <img src={Time} /> 4:09
+                </span>
+              </div>
+              <div className="map-stats-right">
+                <span>
+                  <img src={CS} /> 4.2
+                </span>
+                <span>
+                  <img src={AR} /> 9.8
+                </span>
+                <span>
+                  <img src={OD} /> 9.6
+                </span>
+              </div>
+            </div>
+          </a>
+          <a
+            className="map-card map-card-blue"
+            href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
+            onClick={handleMapClick}
+          >
+            <div className="map-img">
+              <h2>Phalanx</h2>
+              <h3>USAO</h3>
+            </div>
+            <div className="map-mode">
+              <p>NM3</p>
+            </div>
+            <div className="map-stats">
+              <div className="map-stats-left">
+                <span>
+                  <img src={Star} /> 7.57
+                </span>
+                <span>
+                  <img src={Bpm} /> 208
+                </span>
+                <span>
+                  <img src={Time} /> 4:09
+                </span>
+              </div>
+              <div className="map-stats-right">
+                <span>
+                  <img src={CS} /> 4.2
+                </span>
+                <span>
+                  <img src={AR} /> 9.8
+                </span>
+                <span>
+                  <img src={OD} /> 9.6
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div className={`details ${openDetails === "dt" ? "open" : ""}`}>
+        <div className="summary summary-red" onClick={() => handleToggle("dt")}>
+          DoubleTime
+        </div>
+        <div className="content">
+          <a
+            className="map-card map-card-red"
+            href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
+            onClick={handleMapClick}
+          >
+            <div className="map-img">
+              <h2>Phalanx</h2>
+              <h3>USAO</h3>
+            </div>
+            <div className="map-mode">
+              <p>DT1</p>
+            </div>
+            <div className="map-stats">
+              <div className="map-stats-left">
+                <span>
+                  <img src={Star} /> 7.57
+                </span>
+                <span>
+                  <img src={Bpm} /> 208
+                </span>
+                <span>
+                  <img src={Time} /> 4:09
+                </span>
+              </div>
+              <div className="map-stats-right">
+                <span>
+                  <img src={CS} /> 4.2
+                </span>
+                <span>
+                  <img src={AR} /> 9.8
+                </span>
+                <span>
+                  <img src={OD} /> 9.6
+                </span>
+              </div>
+            </div>
+          </a>
+          <a
+            className="map-card map-card-red"
+            href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
+            onClick={handleMapClick}
+          >
+            <div className="map-img">
+              <h2>Phalanx</h2>
+              <h3>USAO</h3>
+            </div>
+            <div className="map-mode">
+              <p>DT2</p>
+            </div>
+            <div className="map-stats">
+              <div className="map-stats-left">
+                <span>
+                  <img src={Star} /> 7.57
+                </span>
+                <span>
+                  <img src={Bpm} /> 208
+                </span>
+                <span>
+                  <img src={Time} /> 4:09
+                </span>
+              </div>
+              <div className="map-stats-right">
+                <span>
+                  <img src={CS} /> 4.2
+                </span>
+                <span>
+                  <img src={AR} /> 9.8
+                </span>
+                <span>
+                  <img src={OD} /> 9.6
+                </span>
+              </div>
+            </div>
+          </a>
+          <a
+            className="map-card map-card-red"
+            href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
+            onClick={handleMapClick}
+          >
+            <div className="map-img">
+              <h2>Phalanx</h2>
+              <h3>USAO</h3>
+            </div>
+            <div className="map-mode">
+              <p>DT3</p>
+            </div>
+            <div className="map-stats">
+              <div className="map-stats-left">
+                <span>
+                  <img src={Star} /> 7.57
+                </span>
+                <span>
+                  <img src={Bpm} /> 208
+                </span>
+                <span>
+                  <img src={Time} /> 4:09
+                </span>
+              </div>
+              <div className="map-stats-right">
+                <span>
+                  <img src={CS} /> 4.2
+                </span>
+                <span>
+                  <img src={AR} /> 9.8
+                </span>
+                <span>
+                  <img src={OD} /> 9.6
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div className={`details ${openDetails === "hr" ? "open" : ""}`}>
+        <div
+          className="summary summary-green"
+          onClick={() => handleToggle("hr")}
         >
-          <div className="map-img">
-            <h2>Phalanx</h2>
-            <h3>USAO</h3>
-          </div>
-          <div className="map-mode">
-            <p>NM2</p>
-          </div>
-          <div className="map-stats">
-            <div className="map-stats-left">
-              <span>
-                <img src={Star} /> 7.57
-              </span>
-              <span>
-                <img src={Bpm} /> 208
-              </span>
-              <span>
-                <img src={Time} /> 4:09
-              </span>
+          HardRock
+        </div>
+        <div className="content">
+          <a
+            className="map-card map-card-green"
+            href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
+            onClick={handleMapClick}
+          >
+            <div className="map-img">
+              <h2>Phalanx</h2>
+              <h3>USAO</h3>
             </div>
-            <div className="map-stats-right">
-              <span>
-                <img src={CS} /> 4.2
-              </span>
-              <span>
-                <img src={AR} /> 9.8
-              </span>
-              <span>
-                <img src={OD} /> 9.6
-              </span>
+            <div className="map-mode">
+              <p>HR1</p>
             </div>
-          </div>
-        </a>
-        <a
-          className="map-card map-card-blue"
-          href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
-          onClick={handleMapClick}
+            <div className="map-stats">
+              <div className="map-stats-left">
+                <span>
+                  <img src={Star} /> 7.57
+                </span>
+                <span>
+                  <img src={Bpm} /> 208
+                </span>
+                <span>
+                  <img src={Time} /> 4:09
+                </span>
+              </div>
+              <div className="map-stats-right">
+                <span>
+                  <img src={CS} /> 4.2
+                </span>
+                <span>
+                  <img src={AR} /> 9.8
+                </span>
+                <span>
+                  <img src={OD} /> 9.6
+                </span>
+              </div>
+            </div>
+          </a>
+          <a
+            className="map-card map-card-green"
+            href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
+            onClick={handleMapClick}
+          >
+            <div className="map-img">
+              <h2>Phalanx</h2>
+              <h3>USAO</h3>
+            </div>
+            <div className="map-mode">
+              <p>HR2</p>
+            </div>
+            <div className="map-stats">
+              <div className="map-stats-left">
+                <span>
+                  <img src={Star} /> 7.57
+                </span>
+                <span>
+                  <img src={Bpm} /> 208
+                </span>
+                <span>
+                  <img src={Time} /> 4:09
+                </span>
+              </div>
+              <div className="map-stats-right">
+                <span>
+                  <img src={CS} /> 4.2
+                </span>
+                <span>
+                  <img src={AR} /> 9.8
+                </span>
+                <span>
+                  <img src={OD} /> 9.6
+                </span>
+              </div>
+            </div>
+          </a>
+          <a
+            className="map-card map-card-green"
+            href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
+            onClick={handleMapClick}
+          >
+            <div className="map-img">
+              <h2>Phalanx</h2>
+              <h3>USAO</h3>
+            </div>
+            <div className="map-mode">
+              <p>HR3</p>
+            </div>
+            <div className="map-stats">
+              <div className="map-stats-left">
+                <span>
+                  <img src={Star} /> 7.57
+                </span>
+                <span>
+                  <img src={Bpm} /> 208
+                </span>
+                <span>
+                  <img src={Time} /> 4:09
+                </span>
+              </div>
+              <div className="map-stats-right">
+                <span>
+                  <img src={CS} /> 4.2
+                </span>
+                <span>
+                  <img src={AR} /> 9.8
+                </span>
+                <span>
+                  <img src={OD} /> 9.6
+                </span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div className={`details ${openDetails === "hd" ? "open" : ""}`}>
+        <div
+          className="summary summary-yellow"
+          onClick={() => handleToggle("hd")}
         >
-          <div className="map-img">
-            <h2>Phalanx</h2>
-            <h3>USAO</h3>
-          </div>
-          <div className="map-mode">
-            <p>NM3</p>
-          </div>
-          <div className="map-stats">
-            <div className="map-stats-left">
-              <span>
-                <img src={Star} /> 7.57
-              </span>
-              <span>
-                <img src={Bpm} /> 208
-              </span>
-              <span>
-                <img src={Time} /> 4:09
-              </span>
+          Hidden
+        </div>
+        <div className="content">
+          <a
+            className="map-card map-card-yellow"
+            href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
+            onClick={handleMapClick}
+          >
+            <div className="map-img">
+              <h2>Phalanx</h2>
+              <h3>USAO</h3>
             </div>
-            <div className="map-stats-right">
-              <span>
-                <img src={CS} /> 4.2
-              </span>
-              <span>
-                <img src={AR} /> 9.8
-              </span>
-              <span>
-                <img src={OD} /> 9.6
-              </span>
+            <div className="map-mode">
+              <p>HD1</p>
             </div>
-          </div>
-        </a>
-      </details>
-      <details
-        className="details"
-        open={openDetails === "dt"}
-        onClick={(e) => {
-          e.preventDefault();
-          handleToggle("dt");
-        }}
-      >
-        <summary className="summary summary-red">DoubleTime</summary>
-        <a
-          className="map-card map-card-red"
-          href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
-          onClick={handleMapClick}
-        >
-          <div className="map-img">
-            <h2>Phalanx</h2>
-            <h3>USAO</h3>
-          </div>
-          <div className="map-mode">
-            <p>DT1</p>
-          </div>
-          <div className="map-stats">
-            <div className="map-stats-left">
-              <span>
-                <img src={Star} /> 7.57
-              </span>
-              <span>
-                <img src={Bpm} /> 208
-              </span>
-              <span>
-                <img src={Time} /> 4:09
-              </span>
+            <div className="map-stats">
+              <div className="map-stats-left">
+                <span>
+                  <img src={Star} /> 7.57
+                </span>
+                <span>
+                  <img src={Bpm} /> 208
+                </span>
+                <span>
+                  <img src={Time} /> 4:09
+                </span>
+              </div>
+              <div className="map-stats-right">
+                <span>
+                  <img src={CS} /> 4.2
+                </span>
+                <span>
+                  <img src={AR} /> 9.8
+                </span>
+                <span>
+                  <img src={OD} /> 9.6
+                </span>
+              </div>
             </div>
-            <div className="map-stats-right">
-              <span>
-                <img src={CS} /> 4.2
-              </span>
-              <span>
-                <img src={AR} /> 9.8
-              </span>
-              <span>
-                <img src={OD} /> 9.6
-              </span>
+          </a>
+          <a
+            className="map-card map-card-yellow"
+            href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
+            onClick={handleMapClick}
+          >
+            <div className="map-img">
+              <h2>Phalanx</h2>
+              <h3>USAO</h3>
             </div>
-          </div>
-        </a>
-        <a
-          className="map-card map-card-red"
-          href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
-          onClick={handleMapClick}
-        >
-          <div className="map-img">
-            <h2>Phalanx</h2>
-            <h3>USAO</h3>
-          </div>
-          <div className="map-mode">
-            <p>DT2</p>
-          </div>
-          <div className="map-stats">
-            <div className="map-stats-left">
-              <span>
-                <img src={Star} /> 7.57
-              </span>
-              <span>
-                <img src={Bpm} /> 208
-              </span>
-              <span>
-                <img src={Time} /> 4:09
-              </span>
+            <div className="map-mode">
+              <p>HD2</p>
             </div>
-            <div className="map-stats-right">
-              <span>
-                <img src={CS} /> 4.2
-              </span>
-              <span>
-                <img src={AR} /> 9.8
-              </span>
-              <span>
-                <img src={OD} /> 9.6
-              </span>
+            <div className="map-stats">
+              <div className="map-stats-left">
+                <span>
+                  <img src={Star} /> 7.57
+                </span>
+                <span>
+                  <img src={Bpm} /> 208
+                </span>
+                <span>
+                  <img src={Time} /> 4:09
+                </span>
+              </div>
+              <div className="map-stats-right">
+                <span>
+                  <img src={CS} /> 4.2
+                </span>
+                <span>
+                  <img src={AR} /> 9.8
+                </span>
+                <span>
+                  <img src={OD} /> 9.6
+                </span>
+              </div>
             </div>
-          </div>
-        </a>
-        <a
-          className="map-card map-card-red"
-          href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
-          onClick={handleMapClick}
-        >
-          <div className="map-img">
-            <h2>Phalanx</h2>
-            <h3>USAO</h3>
-          </div>
-          <div className="map-mode">
-            <p>DT3</p>
-          </div>
-          <div className="map-stats">
-            <div className="map-stats-left">
-              <span>
-                <img src={Star} /> 7.57
-              </span>
-              <span>
-                <img src={Bpm} /> 208
-              </span>
-              <span>
-                <img src={Time} /> 4:09
-              </span>
+          </a>
+          <a
+            className="map-card map-card-yellow"
+            href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
+            onClick={handleMapClick}
+          >
+            <div className="map-img">
+              <h2>Phalanx</h2>
+              <h3>USAO</h3>
             </div>
-            <div className="map-stats-right">
-              <span>
-                <img src={CS} /> 4.2
-              </span>
-              <span>
-                <img src={AR} /> 9.8
-              </span>
-              <span>
-                <img src={OD} /> 9.6
-              </span>
+            <div className="map-mode">
+              <p>HD3</p>
             </div>
-          </div>
-        </a>
-      </details>
-      <details
-        className="details"
-        open={openDetails === "hr"}
-        onClick={(e) => {
-          e.preventDefault();
-          handleToggle("hr");
-        }}
-      >
-        <summary className="summary summary-green">HardRock</summary>
-        <a
-          className="map-card map-card-green"
-          href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
-          onClick={handleMapClick}
-        >
-          <div className="map-img">
-            <h2>Phalanx</h2>
-            <h3>USAO</h3>
-          </div>
-          <div className="map-mode">
-            <p>HR1</p>
-          </div>
-          <div className="map-stats">
-            <div className="map-stats-left">
-              <span>
-                <img src={Star} /> 7.57
-              </span>
-              <span>
-                <img src={Bpm} /> 208
-              </span>
-              <span>
-                <img src={Time} /> 4:09
-              </span>
+            <div className="map-stats">
+              <div className="map-stats-left">
+                <span>
+                  <img src={Star} /> 7.57
+                </span>
+                <span>
+                  <img src={Bpm} /> 208
+                </span>
+                <span>
+                  <img src={Time} /> 4:09
+                </span>
+              </div>
+              <div className="map-stats-right">
+                <span>
+                  <img src={CS} /> 4.2
+                </span>
+                <span>
+                  <img src={AR} /> 9.8
+                </span>
+                <span>
+                  <img src={OD} /> 9.6
+                </span>
+              </div>
             </div>
-            <div className="map-stats-right">
-              <span>
-                <img src={CS} /> 4.2
-              </span>
-              <span>
-                <img src={AR} /> 9.8
-              </span>
-              <span>
-                <img src={OD} /> 9.6
-              </span>
-            </div>
-          </div>
-        </a>
-        <a
-          className="map-card map-card-green"
-          href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
-          onClick={handleMapClick}
-        >
-          <div className="map-img">
-            <h2>Phalanx</h2>
-            <h3>USAO</h3>
-          </div>
-          <div className="map-mode">
-            <p>HR2</p>
-          </div>
-          <div className="map-stats">
-            <div className="map-stats-left">
-              <span>
-                <img src={Star} /> 7.57
-              </span>
-              <span>
-                <img src={Bpm} /> 208
-              </span>
-              <span>
-                <img src={Time} /> 4:09
-              </span>
-            </div>
-            <div className="map-stats-right">
-              <span>
-                <img src={CS} /> 4.2
-              </span>
-              <span>
-                <img src={AR} /> 9.8
-              </span>
-              <span>
-                <img src={OD} /> 9.6
-              </span>
-            </div>
-          </div>
-        </a>
-        <a
-          className="map-card map-card-green"
-          href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
-          onClick={handleMapClick}
-        >
-          <div className="map-img">
-            <h2>Phalanx</h2>
-            <h3>USAO</h3>
-          </div>
-          <div className="map-mode">
-            <p>HR3</p>
-          </div>
-          <div className="map-stats">
-            <div className="map-stats-left">
-              <span>
-                <img src={Star} /> 7.57
-              </span>
-              <span>
-                <img src={Bpm} /> 208
-              </span>
-              <span>
-                <img src={Time} /> 4:09
-              </span>
-            </div>
-            <div className="map-stats-right">
-              <span>
-                <img src={CS} /> 4.2
-              </span>
-              <span>
-                <img src={AR} /> 9.8
-              </span>
-              <span>
-                <img src={OD} /> 9.6
-              </span>
-            </div>
-          </div>
-        </a>
-      </details>
-      <details
-        className="details"
-        open={openDetails === "hd"}
-        onClick={(e) => {
-          e.preventDefault();
-          handleToggle("hd");
-        }}
-      >
-        <summary className="summary summary-yellow">Hidden</summary>
-        <a
-          className="map-card map-card-yellow"
-          href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
-          onClick={handleMapClick}
-        >
-          <div className="map-img">
-            <h2>Phalanx</h2>
-            <h3>USAO</h3>
-          </div>
-          <div className="map-mode">
-            <p>HD1</p>
-          </div>
-          <div className="map-stats">
-            <div className="map-stats-left">
-              <span>
-                <img src={Star} /> 7.57
-              </span>
-              <span>
-                <img src={Bpm} /> 208
-              </span>
-              <span>
-                <img src={Time} /> 4:09
-              </span>
-            </div>
-            <div className="map-stats-right">
-              <span>
-                <img src={CS} /> 4.2
-              </span>
-              <span>
-                <img src={AR} /> 9.8
-              </span>
-              <span>
-                <img src={OD} /> 9.6
-              </span>
-            </div>
-          </div>
-        </a>
-        <a
-          className="map-card map-card-yellow"
-          href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
-          onClick={handleMapClick}
-        >
-          <div className="map-img">
-            <h2>Phalanx</h2>
-            <h3>USAO</h3>
-          </div>
-          <div className="map-mode">
-            <p>HD2</p>
-          </div>
-          <div className="map-stats">
-            <div className="map-stats-left">
-              <span>
-                <img src={Star} /> 7.57
-              </span>
-              <span>
-                <img src={Bpm} /> 208
-              </span>
-              <span>
-                <img src={Time} /> 4:09
-              </span>
-            </div>
-            <div className="map-stats-right">
-              <span>
-                <img src={CS} /> 4.2
-              </span>
-              <span>
-                <img src={AR} /> 9.8
-              </span>
-              <span>
-                <img src={OD} /> 9.6
-              </span>
-            </div>
-          </div>
-        </a>
-        <a
-          className="map-card map-card-yellow"
-          href="https://osu.ppy.sh/beatmapsets/2373050#osu/5123942"
-          onClick={handleMapClick}
-        >
-          <div className="map-img">
-            <h2>Phalanx</h2>
-            <h3>USAO</h3>
-          </div>
-          <div className="map-mode">
-            <p>HD3</p>
-          </div>
-          <div className="map-stats">
-            <div className="map-stats-left">
-              <span>
-                <img src={Star} /> 7.57
-              </span>
-              <span>
-                <img src={Bpm} /> 208
-              </span>
-              <span>
-                <img src={Time} /> 4:09
-              </span>
-            </div>
-            <div className="map-stats-right">
-              <span>
-                <img src={CS} /> 4.2
-              </span>
-              <span>
-                <img src={AR} /> 9.8
-              </span>
-              <span>
-                <img src={OD} /> 9.6
-              </span>
-            </div>
-          </div>
-        </a>
-      </details>
+          </a>
+        </div>
+      </div>
     </section>
   );
 };
