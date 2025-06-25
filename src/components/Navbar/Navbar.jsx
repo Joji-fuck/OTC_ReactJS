@@ -68,7 +68,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/organizers" onClick={toggleMenu}>
+            <Link to="/staff" onClick={toggleMenu}>
               Организаторы
             </Link>
           </li>
