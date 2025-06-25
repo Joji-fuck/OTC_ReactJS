@@ -7,7 +7,7 @@
 #root {
   color: #ffffff;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./assets/images/background.jpg") no-repeat;
+    url("./assets/images/background.jpg");
   background-size: 105%;
   background-position: var(--bg-x, 50%) var(--bg-y, 50%);
   min-height: 100vh;

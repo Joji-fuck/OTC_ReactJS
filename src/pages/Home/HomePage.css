@@ -70,7 +70,34 @@ main {
   }
 }
 
+.info-blocks {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  margin-top: auto;
+}
+
+.info-block {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 300px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.info-block h3 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
 @media (max-width: 768px) {
+  .info-blocks {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
   .registration-btn img {
     width: 280px;
     height: 280px;

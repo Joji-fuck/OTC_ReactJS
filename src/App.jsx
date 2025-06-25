@@ -1,12 +1,26 @@
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import Preloader from "./components/Preloader/Preloader.jsx";
+
+import HomePage from "./pages/Home/HomePage.jsx";
+import MappoolPage from "./pages/Mappool/MappoolPage.jsx";
+import PlayersPage from "./pages/Players/PlayersPage.jsx";
+import RegulationsPage from "./pages/Regulations/RegulationPage.jsx";
+import StaffPage from "./pages/Staff/StaffPage.jsx";
+
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    if (document.readyState === 'complete') {
+    if (document.readyState === "complete") {
       setLoading(false);
     } else {
       const handleLoad = () => setLoading(false);
-      window.addEventListener('load', handleLoad);
-      return () => window.removeEventListener('load', handleLoad);
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
     }
   }, []);
   useEffect(() => {
