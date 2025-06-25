@@ -37,7 +37,10 @@ main {
   z-index: 3;
   position: relative;
   top: -1px;
+  mask: linear-gradient(to bottom, white 80%, transparent 100%);
+  -webkit-mask: linear-gradient(to bottom, white 80%, transparent 100%);
 }
+
 @media (hover: hover) {
   .registration-btn img:hover {
     transition: 0.3s;
@@ -90,6 +93,14 @@ main {
 .info-block h3 {
   margin-bottom: 15px;
   font-size: 1.5em;
+}
+.info-block a {
+  color: white;
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
+.info-block a:hover {
+  color: beige;
 }
 
 @media (max-width: 768px) {
