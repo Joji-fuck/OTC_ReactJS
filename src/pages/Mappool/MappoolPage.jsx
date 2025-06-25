@@ -21,6 +21,18 @@ const MappoolPage = () => {
 
   return (
     <section className="mappool">
+      <summary className="zip-maps">
+        <a href="#" className="arrows">
+          ◄
+        </a>
+        <h1>STAGE SELECT</h1>
+        <a href="#" className="arrows">
+          ►
+        </a>
+        <a href="#" className="download-zip">
+          Скачать зип-файл
+        </a>
+      </summary>
       <h1 className="mappool-h1">Маппул</h1>
       <details
         className="details"
