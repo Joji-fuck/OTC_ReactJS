@@ -9,7 +9,7 @@ import HomePage from "./pages/Home/HomePage.jsx";
 import MappoolPage from "./pages/Mappool/MappoolPage.jsx";
 import PlayersPage from "./pages/Players/PlayersPage.jsx";
 import RegulationsPage from "./pages/Regulations/RegulationPage.jsx";
-import AboutPage from "./pages/About/AboutPage.jsx";
+import OrganizersPage from "./pages/Organizers/OrganizersPage.jsx";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           <Route path="/mappool" element={<MappoolPage />} />
           <Route path="/players" element={<PlayersPage />} />
           <Route path="/regulations" element={<RegulationsPage />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/organizers" element={<OrganizersPage />} />
         </Routes>
         <Footer />
       </main>

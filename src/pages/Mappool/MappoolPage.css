@@ -1,13 +1,16 @@
 .mappool {
   min-height: 83.3vh;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.mappool-h1 {
-  text-align: center;
-  margin: 20px 0;
-  font-size: 2em;
-}
+/*.mappool-h1 {*/
+/*  text-align: center;*/
+/*  margin: 20px 0;*/
+/*  font-size: 2em;*/
+/*}*/
 .details {
-  width: 90%;
+  width: 100%;
   margin: 20px auto;
   overflow: hidden;
   transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);

@@ -68,8 +68,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/about" onClick={toggleMenu}>
-              О турнире
+            <Link to="/organizers" onClick={toggleMenu}>
+              Организаторы
             </Link>
           </li>
         </ul>
