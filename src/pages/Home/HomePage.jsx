@@ -13,7 +13,7 @@ const HomePage = () => {
           target="blank"
           rel="noopener noreferrer"
         >
-          <img src={OsuButton} alt="Запись" loading="lazy" />
+          <img src={OsuButton} alt="Запись" />
         </a>
         <div className="registration-right">
           <img
@@ -21,7 +21,6 @@ const HomePage = () => {
             src={Stesha}
             alt="Маскот"
             width={1042}
-            loading="lazy"
           />
         </div>
       </section>

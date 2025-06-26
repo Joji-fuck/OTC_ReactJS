@@ -171,6 +171,7 @@
   background: #8cb9f8;
   color: #213a5e;
 }
+
 @media (max-width: 864px) {
   .download-zip {
     scale: 85%;
