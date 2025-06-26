@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar.jsx";
@@ -11,6 +16,23 @@ import MappoolPage from "./pages/Mappool/MappoolPage.jsx";
 import PlayersPage from "./pages/Players/PlayersPage.jsx";
 import RegulationsPage from "./pages/Regulations/RegulationPage.jsx";
 import StaffPage from "./pages/Staff/StaffPage.jsx";
+
+// Компонент с анимированными маршрутами
+const AnimatedRoutes = () => {
+  const location = useLocation();
+
+  return (
+    <div className="page-transition" key={location.pathname}>
+      <Routes location={location}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/mappool" element={<MappoolPage />} />
+        <Route path="/players" element={<PlayersPage />} />
+        <Route path="/regulations" element={<RegulationsPage />} />
+        <Route path="/staff" element={<StaffPage />} />
+      </Routes>
+    </div>
+  );
+};
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -40,13 +62,7 @@ function App() {
       <main className="App">
         {loading && <Preloader />}
         <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/mappool" element={<MappoolPage />} />
-          <Route path="/players" element={<PlayersPage />} />
-          <Route path="/regulations" element={<RegulationsPage />} />
-          <Route path="/staff" element={<StaffPage />} />
-        </Routes>
+        <AnimatedRoutes />
         <Footer />
       </main>
     </Router>

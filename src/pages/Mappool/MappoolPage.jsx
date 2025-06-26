@@ -15,8 +15,16 @@ const MappoolPage = () => {
   const handleToggle = (modType) => {
     if (isAnimating) return;
     setIsAnimating(true);
-    setOpenDetails(openDetails === modType ? null : modType);
-    setTimeout(() => setIsAnimating(false), 600);
+
+    if (openDetails === modType) {
+      // Закрытие категории
+      setOpenDetails(null);
+      setTimeout(() => setIsAnimating(false), 800);
+    } else {
+      // Открытие категории
+      setOpenDetails(modType);
+      setTimeout(() => setIsAnimating(false), 800);
+    }
   };
 
   const handleMapClick = (e) => {

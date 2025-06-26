@@ -8,18 +8,21 @@ main {
   width: 90%;
   height: 100%;
   margin: 0 auto;
+  min-height: 400px; /* Минимальная высота для предотвращения сжатия */
+  max-height: 800px; /* Максимальная высота */
 }
 .registration-btn img {
   border-radius: 50%;
   box-shadow: 0 0 50px white;
   animation: button-rotate 0.3s infinite;
-}
-.registration-btn img {
   position: relative;
   left: 60px;
+  width: min(550px, 40vw); /* Адаптивная ширина */
+  height: min(550px, 40vw); /* Адаптивная высота */
   width: 550px;
   height: 550px;
   transition: 0.3s;
+  -webkit-user-drag: none;
 }
 .registration-btn span {
   font-size: 72px;
@@ -39,6 +42,9 @@ main {
   top: -1px;
   mask: linear-gradient(to bottom, white 80%, transparent 100%);
   -webkit-mask: linear-gradient(to bottom, white 80%, transparent 100%);
+  -webkit-user-drag: none;
+  pointer-events: none;
+  user-select: none;
 }
 
 @media (hover: hover) {
@@ -61,15 +67,15 @@ main {
   .registration-stesha {
     display: none;
   }
+
   .registration {
     height: 86.15vh;
   }
 }
 @media (max-width: 1600px) and (hover: hover) {
   .registration-btn img:hover {
-    transition: 0.3s;
-    width: 500px;
-    height: 500px;
+    transition: 0.5s;
+    scale: 50%;
   }
 }
 
@@ -136,5 +142,19 @@ main {
 
   .registration-btn {
     text-align: center;
+  }
+}
+@media (max-height: 650px) {
+  .registration {
+    height: calc(100vh - 100px);
+    min-height: 250px;
+  }
+
+  .registration-btn img {
+    width: min(200px, 50vw);
+    height: min(200px, 50vw);
+  }
+  .registration-stesha {
+    display: none;
   }
 }
