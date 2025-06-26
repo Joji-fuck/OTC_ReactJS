@@ -4,12 +4,18 @@
   padding: 0;
   font-family: "Montserrat", sans-serif;
 }
+html,
+body {
+  overscroll-behavior: none;
+  height: 100%;
+}
 #root {
   color: #ffffff;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./assets/images/background.jpg");
+    url("./assets/images/background.jpg") no-repeat;
   background-size: 105%;
   background-position: var(--bg-x, 50%) var(--bg-y, 50%);
+  background-attachment: fixed;
   min-height: 100vh;
   overscroll-behavior: none;
   position: relative;
@@ -19,12 +25,45 @@
 a {
   text-decoration: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 1600px) {
   #root {
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
+    min-height: 100vh;
     overflow-y: auto;
-    height: 100vh;
+    transition: none;
+    overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
   }
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.App > .routes-container {
+  flex: 1;
+}
+.page-transition {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+a,
+button,
+.navbar-links li,
+.navbar-toggle,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }

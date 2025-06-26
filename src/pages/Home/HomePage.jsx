@@ -28,15 +28,47 @@ const HomePage = () => {
       <section className="info-blocks">
         <div className="info-block">
           <h3>О турнире</h3>
-          <p>писяпопа</p>
+          <p>
+            <a
+              href="https://t.me/osutyumencup"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              OSU! ТУРНИР ТЮМЕНЬ 2025
+            </a>{" "}
+            — региональное соревнование по популярной ритм-игре osu для игроков
+            Тюменской области. Мероприятие открыто для всех желающих, независимо
+            от уровня игры.
+          </p>
         </div>
         <div className="info-block">
           <h3>Призы</h3>
-          <p>девственность романа габайдуллина</p>
+          <p>
+            Девственность{" "}
+            <a
+              href="https://t.me/smallboywantschoko"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="info-roma"
+            >
+              Романа Габайдуллина
+            </a>
+          </p>
         </div>
         <div className="info-block">
           <h3>Расписание</h3>
-          <p>когда по кайфу</p>
+          <p>
+            Турнир пройдет в два этапа: онлайн-квалификация (5-6 июля) из дома и
+            LAN-финал (13 июля) в Тюмени на{" "}
+            <a
+              href="https://go.2gis.com/bbyUY"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Береговой 28
+            </a>
+            , где лучшие игроки встретятся лично.
+          </p>
         </div>
       </section>
     </>
