@@ -138,3 +138,6 @@ nav {
     transition: background 0.2s ease;
   }
 }
+.navbar-menu ul li a.active::after {
+  width: calc(100% - 100px);
+}
