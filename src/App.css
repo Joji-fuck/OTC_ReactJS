@@ -25,10 +25,10 @@ body {
 a {
   text-decoration: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 1600px) {
   #root {
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center;
     min-height: 100vh;
     overflow-y: auto;
@@ -44,4 +44,26 @@ a {
 }
 .App > .routes-container {
   flex: 1;
+}
+.page-transition {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+a,
+button,
+.navbar-links li,
+.navbar-toggle,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }

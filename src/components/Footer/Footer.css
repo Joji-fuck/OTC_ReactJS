@@ -12,6 +12,7 @@ footer {
 .social-links {
   display: flex;
   gap: 15px;
+  user-select: none;
 }
 
 .social-links a {

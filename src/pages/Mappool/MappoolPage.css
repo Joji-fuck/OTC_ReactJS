@@ -3,6 +3,8 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
 }
 .details {
   width: 100%;
@@ -13,7 +15,7 @@
 .content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .details.open .content {
@@ -170,7 +172,7 @@
   color: #213a5e;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 864px) {
   .download-zip {
     scale: 85%;
   }
@@ -198,15 +200,15 @@
   }
 
   .map-mode {
-    width: 100%;
+    width: 95%;
     transform: none;
     font-size: 24px;
     padding: 10px 0;
   }
 
   .map-stats {
-    width: 100%;
-    gap: 10px;
+    width: 90%;
+    gap: 5px;
     height: auto;
     padding: 15px 0;
   }
