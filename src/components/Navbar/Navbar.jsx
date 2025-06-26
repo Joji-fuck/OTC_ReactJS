@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import Telegram from "../../assets/images/socials/telegram.svg";
 import Discord from "../../assets/images/socials/discord.svg";
@@ -48,27 +48,47 @@ const Navbar = () => {
         </button>
         <ul className={isOpen ? "nav-open" : ""}>
           <li>
-            <Link to="/" onClick={toggleMenu}>
+            <Link
+              to="/"
+              onClick={toggleMenu}
+              className={location.pathname === "/" ? "active" : ""}
+            >
               Главная
             </Link>
           </li>
           <li>
-            <Link to="/mappool" onClick={toggleMenu}>
+            <Link
+              to="/mappool"
+              onClick={toggleMenu}
+              className={location.pathname === "/mappool" ? "active" : ""}
+            >
               Маппул
             </Link>
           </li>
           <li>
-            <Link to="/players" onClick={toggleMenu}>
+            <Link
+              to="/players"
+              onClick={toggleMenu}
+              className={location.pathname === "/players" ? "active" : ""}
+            >
               Участники
             </Link>
           </li>
           <li>
-            <Link to="/regulations" onClick={toggleMenu}>
+            <Link
+              to="/regulations"
+              onClick={toggleMenu}
+              className={location.pathname === "/regulations" ? "active" : ""}
+            >
               Регламент
             </Link>
           </li>
           <li>
-            <Link to="/staff" onClick={toggleMenu}>
+            <Link
+              to="/staff"
+              onClick={toggleMenu}
+              className={location.pathname === "/staff" ? "active" : ""}
+            >
               Организаторы
             </Link>
           </li>
