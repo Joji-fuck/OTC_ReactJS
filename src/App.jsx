@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar.jsx";
@@ -12,7 +17,6 @@ import PlayersPage from "./pages/Players/PlayersPage.jsx";
 import RegulationsPage from "./pages/Regulations/RegulationPage.jsx";
 import StaffPage from "./pages/Staff/StaffPage.jsx";
 
-// Компонент с анимированными маршрутами
 const AnimatedRoutes = () => {
   const location = useLocation();
 
@@ -41,11 +45,18 @@ function App() {
     }
   }, []);
   useEffect(() => {
+    let ticking = false;
     const handleMouseMove = (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 50;
-      const y = (e.clientY / window.innerHeight - 0.5) * 50;
-      document.documentElement.style.setProperty("--bg-x", `${50 + x}%`);
-      document.documentElement.style.setProperty("--bg-y", `${50 + y}%`);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const x = (e.clientX / window.innerWidth - 0.5) * 50;
+          const y = (e.clientY / window.innerHeight - 0.5) * 50;
+          document.documentElement.style.setProperty("--bg-x", `${50 + x}%`);
+          document.documentElement.style.setProperty("--bg-y", `${50 + y}%`);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     document.addEventListener("mousemove", handleMouseMove);
@@ -57,17 +68,10 @@ function App() {
       <main className="App">
         {loading && <Preloader />}
         <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/mappool" element={<MappoolPage />} />
-          <Route path="/players" element={<PlayersPage />} />
-          <Route path="/regulations" element={<RegulationsPage />} />
-          <Route path="/staff" element={<StaffPage />} />
-        </Routes>
+        <AnimatedRoutes />
         <Footer />
       </main>
     </Router>
   );
 }
 export default App;
-

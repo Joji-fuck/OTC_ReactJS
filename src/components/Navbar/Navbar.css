@@ -40,7 +40,6 @@ nav {
 .navbar-menu ul li a.active::after {
   width: 100%;
 }
-
 @media (max-width: 768px) {
   .social-link {
     display: flex;
@@ -137,7 +136,7 @@ nav {
     border-radius: 8px;
     transition: background 0.2s ease;
   }
-}
-.navbar-menu ul li a.active::after {
-  width: calc(100% - 100px);
+  .navbar-menu ul li a.active::after {
+    width: calc(100% - 100px);
+  }
 }
