@@ -11,7 +11,7 @@ const StaffPage = () => {
           {staffData.staff.map(staff => (
             <StaffCard
               key={staff.id}
-              staff={staff.player_id}
+              playerId={staff.player_id}
               role={staff.role}
             />
           ))}
