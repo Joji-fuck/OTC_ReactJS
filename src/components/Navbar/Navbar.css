@@ -37,6 +37,10 @@ nav {
 .social-link {
   display: none;
 }
+.navbar-menu ul li a.active::after {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .social-link {
     display: flex;

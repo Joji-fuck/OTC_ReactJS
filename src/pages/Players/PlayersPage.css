@@ -2,18 +2,15 @@
   padding: 20px;
   max-width: 1330px;
   margin: 0 auto;
+  width: calc(100% - 40px);
+  min-width: 0;
 }
 
 .players-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 12px;
   margin-top: 30px;
-  justify-content: left;
-}
-
-.player-card {
-  width: 280px;
-  flex-grow: 0;
-  flex-shrink: 0;
+  justify-content: center;
+  width: 100%;
 }
