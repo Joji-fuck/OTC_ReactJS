@@ -54,7 +54,7 @@ main {
   }
 }
 
-@media (max-width: 1564px) {
+@media (max-width: 1600px) {
   .registration-stesha {
     display: none;
   }
@@ -62,7 +62,7 @@ main {
     height: 86.15vh;
   }
 }
-@media (max-width: 1564px) and (hover: hover) {
+@media (max-width: 1600px) and (hover: hover) {
   .registration-btn img:hover {
     transition: 0.3s;
     width: 500px;
@@ -70,7 +70,34 @@ main {
   }
 }
 
+.info-blocks {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  margin-top: auto;
+}
+
+.info-block {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 300px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.info-block h3 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
 @media (max-width: 768px) {
+  .info-blocks {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
   .registration-btn img {
     width: 280px;
     height: 280px;

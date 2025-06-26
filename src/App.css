@@ -6,13 +6,16 @@
 }
 #root {
   color: #ffffff;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./assets/images/danze_eat.gif") no-repeat;
-  /*background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./assets/images/bg.gif") no-repeat;*/
-  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./assets/images/background.jpg");
+  background-size: 105%;
+  background-position: var(--bg-x, 50%) var(--bg-y, 50%);
   min-height: 100vh;
   overscroll-behavior: none;
   position: relative;
+  transition: background-position 0.1s ease-out;
 }
+
 a {
   text-decoration: none;
 }

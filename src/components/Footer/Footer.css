@@ -9,13 +9,6 @@ footer {
   position: relative;
 }
 
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
 .social-links {
   display: flex;
   gap: 15px;
@@ -39,7 +32,6 @@ footer {
   height: 25px;
   filter: brightness(0.9);
 }
-
 footer p {
   color: #ffffff;
   text-align: center;
