@@ -19,11 +19,11 @@ const MappoolPage = () => {
     if (openDetails === modType) {
       // Закрытие категории
       setOpenDetails(null);
-      setTimeout(() => setIsAnimating(false), 800);
+      setTimeout(() => setIsAnimating(false));
     } else {
       // Открытие категории
       setOpenDetails(modType);
-      setTimeout(() => setIsAnimating(false), 800);
+      setTimeout(() => setIsAnimating(false));
     }
   };
 
