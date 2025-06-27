@@ -1,53 +1,78 @@
 .staff-card {
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.2s;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s;
 }
 
 .staff-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .staff-card.loading,
 .staff-card.error {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 200px;
-    color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: #666;
 }
 
 .staff-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 .staff-name {
-    margin: 10px 0;
-    color: #333;
+  margin: 10px 0;
+  color: #333;
 }
 
 .staff-stats {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .stat {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .stat-label {
-    color: #666;
-    font-size: 14px;
+  color: #666;
+  font-size: 14px;
 }
 
 .stat-value {
-    color: #333;
-    font-weight: bold;
-    margin-left: 5px;
+  color: #333;
+  font-weight: bold;
+  margin-left: 5px;
+}
+@media (max-width: 768px) {
+  .staff-card {
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+  .staff-avatar {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 480px) {
+  .staff-card {
+    padding: 10px;
+  }
+
+  .staff-name {
+    font-size: 16px;
+  }
+
+  .staff-avatar {
+    width: 50px;
+    height: 50px;
+  }
 }

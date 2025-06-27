@@ -10,10 +10,14 @@ const HomePage = () => {
         <a
           className="registration-btn"
           href="https://forms.gle/W1sjkkvSt7pzbv939"
-          target="blank"
+          target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={OsuButton} alt="Запись" loading="lazy" />
+          <img
+            src={OsuButton}
+            alt="Кнопка записи на турнир OSU!"
+            loading="lazy"
+          />
         </a>
         <div className="registration-right">
           <img

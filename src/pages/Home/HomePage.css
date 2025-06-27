@@ -8,21 +8,25 @@ main {
   width: 90%;
   height: 100%;
   margin: 0 auto;
-  min-height: 400px; /* Минимальная высота для предотвращения сжатия */
-  max-height: 800px; /* Максимальная высота */
+  min-height: 400px;
+  max-height: 800px;
 }
+.registration-btn {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
 .registration-btn img {
   border-radius: 50%;
-  box-shadow: 0 0 50px white;
+  box-shadow: 0 0 clamp(20px, 5vw, 50px) rgba(255, 255, 255, 0.8);
   animation: button-rotate 0.3s infinite;
-  position: relative;
-  left: 60px;
-  width: min(550px, 40vw); /* Адаптивная ширина */
-  height: min(550px, 40vw); /* Адаптивная высота */
-  width: 550px;
-  height: 550px;
-  transition: 0.3s;
+  width: clamp(200px, 35vw, 550px);
+  height: clamp(200px, 35vw, 550px);
+  transition: all 0.3s ease;
   -webkit-user-drag: none;
+  user-select: none;
+  cursor: pointer;
 }
 .registration-btn span {
   font-size: 72px;
@@ -48,10 +52,12 @@ main {
 }
 
 @media (hover: hover) {
-  .registration-btn img:hover {
-    transition: 0.3s;
-    width: 40rem;
-    height: 40rem;
+  .registration-btn:hover {
+    transform: scale(1.15);
+  }
+
+  .registration-btn:hover img {
+    box-shadow: 0 0 clamp(30px, 8vw, 80px) rgba(255, 255, 255, 1);
   }
 }
 @keyframes button-rotate {
@@ -70,12 +76,6 @@ main {
 
   .registration {
     height: 86.15vh;
-  }
-}
-@media (max-width: 1600px) and (hover: hover) {
-  .registration-btn img:hover {
-    transition: 0.5s;
-    scale: 50%;
   }
 }
 
@@ -116,16 +116,12 @@ main {
     gap: 20px;
   }
   .registration-btn img {
-    width: 280px;
-    height: 280px;
-    left: 0;
-    user-select: none;
+    width: clamp(250px, 60vw, 320px);
+    height: clamp(250px, 60vw, 320px);
   }
-  .registration-btn img:focus,
-  .registration-btn img:active {
-    width: 380px;
-    height: 380px;
-    left: 0;
+
+  .registration-btn:active {
+    transform: scale(0.95);
   }
   .registration-btn span {
     font-size: 36px;
@@ -156,5 +152,63 @@ main {
   }
   .registration-stesha {
     display: none;
+  }
+}
+@media (max-width: 480px) {
+  .registration-btn img {
+    width: clamp(180px, 50vw, 240px);
+    height: clamp(180px, 50vw, 240px);
+  }
+
+  .registration-btn span {
+    font-size: 28px;
+  }
+
+  .info-block {
+    padding: 20px;
+    max-width: 280px;
+  }
+
+  .info-block h3 {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 360px) {
+  .registration {
+    min-height: 300px;
+    padding: 20px 10px;
+  }
+
+  .registration-btn img {
+    width: clamp(160px, 45vw, 200px);
+    height: clamp(160px, 45vw, 200px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  }
+}
+@media (max-width: 768px) and (max-height: 500px) {
+  .registration {
+    height: auto;
+    min-height: 200px;
+    padding: 10px;
+  }
+
+  .registration-btn img {
+    width: clamp(120px, 25vw, 180px);
+    height: clamp(120px, 25vw, 180px);
+  }
+}
+@media (min-width: 1920px) {
+  .registration-btn img {
+    width: clamp(600px, 40vw, 700px);
+    height: clamp(600px, 40vw, 700px);
+  }
+
+  .registration-btn span {
+    font-size: 84px;
+  }
+
+  .info-blocks {
+    gap: 50px;
+    padding: 60px 40px;
   }
 }

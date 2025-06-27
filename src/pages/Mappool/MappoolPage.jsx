@@ -17,11 +17,9 @@ const MappoolPage = () => {
     setIsAnimating(true);
 
     if (openDetails === modType) {
-      // Закрытие категории
       setOpenDetails(null);
       setTimeout(() => setIsAnimating(false));
     } else {
-      // Открытие категории
       setOpenDetails(modType);
       setTimeout(() => setIsAnimating(false));
     }

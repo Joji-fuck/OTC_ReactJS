@@ -1,4 +1,14 @@
+/* структуре в css пизда)) */
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "./responsive.css";
+
+:root {
+  --container-padding: clamp(10px, 5vw, 50px);
+  --font-size-base: clamp(14px, 2.5vw, 18px);
+  --gap-size: clamp(10px, 3vw, 30px);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +35,19 @@ body {
 a {
   text-decoration: none;
 }
+@media (max-width: 480px) {
+  #root {
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+  #root {
+    background-size: cover;
+    background-position: center;
+  }
+}
 @media (max-width: 1600px) {
   #root {
     background-size: cover;
@@ -35,6 +58,11 @@ a {
     transition: none;
     overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
+  }
+}
+@media (min-width: 1920px) {
+  #root {
+    background-size: 100%;
   }
 }
 .App {
@@ -67,4 +95,3 @@ button,
   -webkit-tap-highlight-color: transparent;
   outline: none;
 }
-/* Макс я еблан но я все вернул чо было */

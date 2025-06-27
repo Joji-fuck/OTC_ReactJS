@@ -1,0 +1,106 @@
+/* Крч максос эта хуйня должна ускорять оптимизацию и т.д но я не придумал как ее нормально использовать) */
+
+.responsive-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--gap-size);
+  padding: var(--container-padding);
+}
+.responsive-text {
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.responsive-btn {
+  padding: clamp(8px, 2vw, 16px) clamp(16px, 4vw, 32px);
+  font-size: clamp(14px, 2.5vw, 18px);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.responsive-card {
+  padding: clamp(10px, 3vw, 20px);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+@media (max-width: 320px) {
+  :root {
+    --container-padding: 8px;
+    --gap-size: 8px;
+    --font-size-base: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .responsive-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .responsive-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .hide-tablet {
+    display: none !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+@media (min-width: 1920px) {
+  :root {
+    --container-padding: 60px;
+    --gap-size: 40px;
+    --font-size-base: 20px;
+  }
+
+  .hide-large {
+    display: none !important;
+  }
+}
+.show-mobile {
+  display: none !important;
+}
+.show-tablet {
+  display: none !important;
+}
+.show-desktop {
+  display: none !important;
+}
+.show-large {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  .show-mobile {
+    display: block !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .show-tablet {
+    display: block !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+  .show-desktop {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .show-large {
+    display: block !important;
+  }
+}
