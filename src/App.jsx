@@ -16,6 +16,7 @@ import MappoolPage from "./pages/Mappool/MappoolPage.jsx";
 import PlayersPage from "./pages/Players/PlayersPage.jsx";
 import RegulationsPage from "./pages/Regulations/RegulationPage.jsx";
 import StaffPage from "./pages/Staff/StaffPage.jsx";
+import NotFound from "./components/Not-found/NotFound.jsx";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -28,6 +29,7 @@ const AnimatedRoutes = () => {
         <Route path="/players" element={<PlayersPage />} />
         <Route path="/regulations" element={<RegulationsPage />} />
         <Route path="/staff" element={<StaffPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
