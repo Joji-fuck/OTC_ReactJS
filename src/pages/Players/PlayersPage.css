@@ -2,6 +2,8 @@
   padding: var(--container-padding);
   max-width: 1200px;
   margin: 0 auto;
+  width: calc(100% - 40px);
+  min-width: 0;
 }
 
 .players-grid {
@@ -9,4 +11,6 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 12px;
   margin-top: 30px;
+  justify-content: center;
+  width: 100%;
 }

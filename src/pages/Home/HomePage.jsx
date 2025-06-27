@@ -25,7 +25,6 @@ const HomePage = () => {
             src={Stesha}
             alt="Маскот"
             width={1042}
-            loading="lazy"
           />
         </div>
       </section>
