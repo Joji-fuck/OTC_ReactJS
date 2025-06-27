@@ -35,9 +35,9 @@ const HomePage = () => {
           <h3>О турнире</h3>
           <p>
             <a
-              href="https://t.me/osutyumencup"
-              target="_blank"
-              rel="noopener noreferrer"
+                href="https://t.me/osutyumencup"
+                target="_blank"
+                rel="noopener noreferrer"
             >
               OSU! ТУРНИР ТЮМЕНЬ 2025
             </a>{" "}
@@ -51,10 +51,10 @@ const HomePage = () => {
           <p>
             Девственность{" "}
             <a
-              href="https://t.me/smallboywantschoko"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="info-roma"
+                href="https://t.me/smallboywantschoko"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="info-roma"
             >
               Романа Габайдуллина
             </a>
@@ -66,13 +66,19 @@ const HomePage = () => {
             Турнир пройдет в два этапа: онлайн-квалификация (5-6 июля) из дома и
             LAN-финал (13 июля) в Тюмени на{" "}
             <a
-              href="https://go.2gis.com/bbyUY"
-              target="_blank"
-              rel="noopener noreferrer"
+                href="https://go.2gis.com/bbyUY"
+                target="_blank"
+                rel="noopener noreferrer"
             >
               Береговой 28
             </a>
             , где лучшие игроки встретятся лично.
+          </p>
+        </div>
+        <div className="info-block">
+          <h3>Спонсоры</h3>
+          <p>
+            Турнир проходит при поддержке:{" "}
           </p>
         </div>
       </section>
