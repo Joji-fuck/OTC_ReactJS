@@ -52,7 +52,7 @@
 
 .stat-value {
   color: #ffffff;
-  font-weight: bold;
+  font-weight: 600;
   margin-left: 5px;
 }
 @media (max-width: 768px) {
