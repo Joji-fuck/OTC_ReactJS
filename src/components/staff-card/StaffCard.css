@@ -1,10 +1,14 @@
 .staff-card {
   background: white;
-  border-radius: 8px;
-  padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.2s;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 300px;
+  backdrop-filter: blur(10px);
+  color: white;
 }
 
 .staff-card:hover {
@@ -18,7 +22,7 @@
   align-items: center;
   justify-content: center;
   min-height: 200px;
-  color: #666;
+  color: white;
 }
 
 .staff-avatar {
