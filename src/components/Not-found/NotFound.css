@@ -61,4 +61,7 @@
         margin: 0;
         margin-bottom: 20px;
     }
+    .not-found-component{
+        height: 500px;
+    }
 }
