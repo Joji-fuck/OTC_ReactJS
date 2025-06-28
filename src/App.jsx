@@ -5,6 +5,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar.jsx";
@@ -31,6 +32,7 @@ const AnimatedRoutes = () => {
         <Route path="/staff" element={<StaffPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <SpeedInsights/>
     </div>
   );
 };

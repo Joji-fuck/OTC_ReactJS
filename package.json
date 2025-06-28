@@ -12,6 +12,7 @@
     "dev:all": "concurrently \"npm run dev\" \"npm run server\""
   },
   "dependencies": {
+    "@vercel/speed-insights": "^1.2.0",
     "axios": "^1.10.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
