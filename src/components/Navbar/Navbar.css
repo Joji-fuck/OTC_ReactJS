@@ -1,5 +1,9 @@
 nav {
   height: 7.6vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
 }
 .burger-menu {
   scale: 0%;

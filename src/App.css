@@ -75,6 +75,7 @@ a {
 }
 .page-transition {
   animation: fadeIn 0.5s ease-out;
+  padding-top: 7.6vh;
 }
 
 @keyframes fadeIn {

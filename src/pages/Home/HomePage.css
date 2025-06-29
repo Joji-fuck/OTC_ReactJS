@@ -172,6 +172,9 @@ main {
 }
 
 @media (max-width: 768px) {
+  .info-blocks{
+    padding-bottom: 130px;
+  }
   .info-blocks {
     flex-direction: column;
     align-items: center;
