@@ -99,7 +99,7 @@ const RegulationPage = () => {
                                 </li>
                             </ul>
                         </li>
-                        <li>Привила FreeMod
+                        <li>Правила FreeMod
                             <ul>
                                 <li>Карты разряда FreeMod могут играться в комбинации следующих модов: HD, HR, FL</li>
                             </ul>
