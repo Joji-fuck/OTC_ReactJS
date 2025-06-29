@@ -38,9 +38,10 @@ const MappoolPage = () => {
         </Helmet>
         <summary className="zip-maps">
           <a
-              href="src\assets\mappool_OTC.zip"
+              // href="src\assets\mappool_OTC.zip"
+              href="#"
               className="download-zip"
-              download="mappool_OTC.zip"
+              // download="mappool_OTC.zip"
           >
             Скачать зип-файл
           </a>
