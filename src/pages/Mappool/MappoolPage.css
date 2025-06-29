@@ -157,6 +157,8 @@
   color: white;
   border-radius: 7px;
   width: 215px;
+  background: #669AE2;
+  transition: background-color 0.3s;
 }
 
 .download-zip:link,
@@ -169,7 +171,7 @@
 .download-zip:hover {
   transition: 0.2s ease-in-out;
   background: #8cb9f8;
-  color: #213a5e;
+  color: #ffffff;
 }
 @media (max-width: 960px){
   .mappool{
