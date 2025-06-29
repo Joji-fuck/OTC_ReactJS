@@ -18,7 +18,9 @@ import PlayersPage from "./pages/Players/PlayersPage.jsx";
 import RegulationsPage from "./pages/Regulations/RegulationPage.jsx";
 import StaffPage from "./pages/Staff/StaffPage.jsx";
 import NotFound from "./components/Not-found/NotFound.jsx";
+import Notification from "./components/Notification/Notification.jsx";
 import Donate from "./components/donate/Donate.jsx";
+
 
 const AnimatedRoutes = () => {
   const location = useLocation();
