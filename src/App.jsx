@@ -11,14 +11,13 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Preloader from "./components/Preloader/Preloader.jsx";
-
+import Notification from "./components/Notification/Notification.jsx";
 import HomePage from "./pages/Home/HomePage.jsx";
 import MappoolPage from "./pages/Mappool/MappoolPage.jsx";
 import PlayersPage from "./pages/Players/PlayersPage.jsx";
 import RegulationsPage from "./pages/Regulations/RegulationPage.jsx";
 import StaffPage from "./pages/Staff/StaffPage.jsx";
 import NotFound from "./components/Not-found/NotFound.jsx";
-import Notification from "./components/Notification/Notification.jsx";
 import Donate from "./components/donate/Donate.jsx";
 
 
@@ -78,6 +77,7 @@ function App() {
         </Helmet>
         <main className="App">
           {loading && <Preloader/>}
+          <Notification/>
           <Navbar/>
           <AnimatedRoutes />
           <Donate/>
