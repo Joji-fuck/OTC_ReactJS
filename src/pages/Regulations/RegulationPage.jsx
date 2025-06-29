@@ -1,9 +1,14 @@
 import React from "react";
 import "./RegulationPage.css";
+import {Helmet} from "react-helmet-async";
 
 const RegulationPage = () => {
   return (
     <div className="regulation-page">
+        <Helmet>
+            <title>Регламент | OTC 2025</title>
+            <meta name="description" content="Официальный регламент турнира OTC 2025. Здесь вы найдете все правила, касающиеся проведения матчей, регистрации и маппула"/>
+        </Helmet>
       <h1>Регламент</h1>
         <div className="regulation-grid">
             <div className="regulation-card bg-red">
