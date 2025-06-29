@@ -49,7 +49,7 @@ const HomePage = () => {
         <div className="info-block">
           <h3>Призы</h3>
           <br/>
-          <p>Турнирный баннер для профиля</p>
+          <p>Сюрприз...</p>
         </div>
         <div className="info-block">
           <h3>Расписание</h3>
@@ -76,5 +76,6 @@ const HomePage = () => {
     </>
   );
 };
+
 
 export default HomePage;
