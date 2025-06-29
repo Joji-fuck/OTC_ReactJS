@@ -7,7 +7,7 @@ const Notification = () => {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setShowNotification(true);
-    });
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
