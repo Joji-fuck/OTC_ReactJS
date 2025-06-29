@@ -272,3 +272,9 @@
     line-height: 55px;
   }
 }
+
+.awaiting{
+  font-weight: 400;
+  text-align: center;
+  margin-top: 20px;
+}
