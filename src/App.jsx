@@ -18,6 +18,7 @@ import PlayersPage from "./pages/Players/PlayersPage.jsx";
 import RegulationsPage from "./pages/Regulations/RegulationPage.jsx";
 import StaffPage from "./pages/Staff/StaffPage.jsx";
 import NotFound from "./components/Not-found/NotFound.jsx";
+import Notification from "./components/Notification/Notification.jsx";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -71,6 +72,7 @@ function App() {
     <Router>
       <main className="App">
         {loading && <Preloader />}
+        <Notification />
         <Navbar />
         <AnimatedRoutes />
         <Footer />

@@ -10,11 +10,14 @@ main {
   margin: 0 auto;
   min-height: 400px;
   max-height: 800px;
+  position: relative;
 }
+
 .registration-btn {
   display: inline-block;
   position: relative;
   transition: transform 0.3s ease;
+  scale: 0.85;
 }
 
 .registration-btn img {
@@ -66,6 +69,65 @@ main {
   }
   100% {
     transform: scale(1);
+  }
+}
+.scroll-arrow {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.scroll-arrow:hover {
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.1);
+}
+.scroll-arrow.clicked {
+  animation: none;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+.scroll-arrow.clicked {
+  animation: none;
+}
+
+@media (max-width: 1024px) {
+  .scroll-arrow {
+    padding: 15px 0;
+  }
+
+  .scroll-arrow svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-arrow {
+    padding: 30px;
+    margin-top: -50px;
+  }
+
+  .scroll-arrow svg {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -172,6 +234,16 @@ main {
   .info-block h3 {
     font-size: 1.2em;
   }
+
+  .scroll-arrow {
+    padding: 25px;
+    margin-top: -40px;
+  }
+
+  .scroll-arrow svg {
+    width: 55px;
+    height: 55px;
+  }
 }
 @media (max-width: 360px) {
   .registration {
@@ -183,6 +255,16 @@ main {
     width: clamp(160px, 45vw, 200px);
     height: clamp(160px, 45vw, 200px);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  }
+
+  .scroll-arrow {
+    padding: 20px;
+    margin-top: -30px;
+  }
+
+  .scroll-arrow svg {
+    width: 50px;
+    height: 50px;
   }
 }
 @media (max-width: 768px) and (max-height: 500px) {
