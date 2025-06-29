@@ -48,17 +48,8 @@ const HomePage = () => {
         </div>
         <div className="info-block">
           <h3>Призы</h3>
-          <p>
-            Девственность{" "}
-            <a
-                href="https://t.me/smallboywantschoko"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="info-roma"
-            >
-              Романа Габайдуллина
-            </a>
-          </p>
+          <br/>
+          <p>Как бог даст</p>
         </div>
         <div className="info-block">
           <h3>Расписание</h3>
@@ -77,9 +68,9 @@ const HomePage = () => {
         </div>
         <div className="info-block">
           <h3>Спонсоры</h3>
-          <p>
-            Турнир проходит при поддержке:{" "}
-          </p>
+            <p>Турнир проходит при поддержке:</p>
+            <br/>
+            <p>Божьей помощи и 25 банок энергетика Adrenaline</p>
         </div>
       </section>
     </>
