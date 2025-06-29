@@ -6,7 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { SpeedInsights } from "@vercel/speed-insights/react"
-
+import {Helmet} from "react-helmet-async";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
@@ -19,6 +19,8 @@ import RegulationsPage from "./pages/Regulations/RegulationPage.jsx";
 import StaffPage from "./pages/Staff/StaffPage.jsx";
 import NotFound from "./components/Not-found/NotFound.jsx";
 import Notification from "./components/Notification/Notification.jsx";
+import Donate from "./components/donate/Donate.jsx";
+
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -69,15 +71,19 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <main className="App">
-        {loading && <Preloader />}
-        <Notification />
-        <Navbar />
-        <AnimatedRoutes />
-        <Footer />
-      </main>
-    </Router>
+      <>
+        <Helmet>
+          <title>Osu Tyumen Cup 2025</title>
+          <meta name="description" content="Официальный сайт турнира Тюменской области по ритм-игре Osu! Расписание, игроки, маппул и регламент"/>
+        </Helmet>
+        <main className="App">
+          {loading && <Preloader/>}
+          <Navbar/>
+          <AnimatedRoutes />
+          <Donate/>
+          <Footer />
+        </main>
+      </>
   );
 }
 export default App;

@@ -10,3 +10,8 @@
   gap: 12px;
   margin-top: 30px;
 }
+@media (max-width: 768px) {
+  .players-grid {
+    margin-bottom: 100px;
+  }
+}

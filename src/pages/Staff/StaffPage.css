@@ -9,6 +9,11 @@
   gap: 12px;
   margin-top: 30px;
 }
+@media (max-width: 768px) {
+  .staff-grid {
+    margin-bottom: 100px;
+  }
+}
 .staff-card {
   background: white;
   border-radius: 8px;

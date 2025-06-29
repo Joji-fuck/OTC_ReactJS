@@ -2,6 +2,7 @@ import React from "react";
 import "./HomePage.css";
 import OsuButton from "../../assets/images/OsuButton.png";
 import Stesha from "../../assets/images/Stesha-2.png";
+import YuMoney from "../../assets/images/icon/io.svg";
 
 const HomePage = () => {
   const [isClicked, setIsClicked] = React.useState(false);
@@ -19,10 +20,10 @@ const HomePage = () => {
     <>
 <section className="registration">
         <a
-          className="registration-btn"
-          href="https://forms.gle/W1sjkkvSt7pzbv939"
-          target="_blank"
-          rel="noopener noreferrer"
+            className="registration-btn"
+            href="https://forms.gle/W1sjkkvSt7pzbv939"
+            target="_blank"
+            rel="noopener noreferrer"
         >
           <img
             src={OsuButton}
@@ -74,8 +75,8 @@ const HomePage = () => {
         </div>
         <div className="info-block">
           <h3>Призы</h3>
-          <br />
-          <p>Турнирный баннер для профиля</p>
+          <br/>
+          <p>Сюрприз...</p>
         </div>
         <div className="info-block">
           <h3>Расписание</h3>
@@ -101,5 +102,6 @@ const HomePage = () => {
     </>
   );
 };
+
 
 export default HomePage;

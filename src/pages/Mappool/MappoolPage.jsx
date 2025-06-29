@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState} from "react";
 import "./MappoolPage.css";
 
 import Star from "../../assets/images/icon/star.svg";
@@ -7,6 +7,7 @@ import Time from "../../assets/images/icon/time.svg";
 import CS from "../../assets/images/icon/cs.svg";
 import AR from "../../assets/images/icon/ar.svg";
 import OD from "../../assets/images/icon/od.svg";
+import {Helmet} from "react-helmet-async";
 
 const MappoolPage = () => {
   const [openDetails, setOpenDetails] = useState(null);
@@ -31,6 +32,10 @@ const MappoolPage = () => {
 
   return (
       <section className="mappool">
+        <Helmet>
+          <title>Маппул | OTC 2025</title>
+          <meta name="description" content="Посмотрите список карт для OTC 2025!"/>
+        </Helmet>
         <summary className="zip-maps">
           <a
               href="src\assets\mappool_OTC.zip"
