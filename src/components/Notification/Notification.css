@@ -1,22 +1,26 @@
 .notification {
   position: fixed;
-  top: -100px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   color: white;
-  padding: 15px 30px;
+  padding: 0 30px;
   border-radius: 10px;
   z-index: 1000;
   transition: all 0.5s ease;
   display: flex;
   align-items: center;
   gap: 15px;
+  font-size: 17px;
 }
 
 .notification.show {
-  top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  top: 80px;
+  width: 420px;
 }
 
 .notification:hover {
@@ -24,7 +28,7 @@
 }
 
 .notification a {
-  color: #87ceeb;
+  color: #ffffff;
   text-decoration: underline;
   margin-left: -2px;
 }
@@ -33,7 +37,7 @@
   background: none;
   border: none;
   color: white;
-  font-size: 18px;
+  font-size: 55px;
   cursor: pointer;
   padding: 0;
   opacity: 0.7;
@@ -45,34 +49,39 @@
 
 @media (max-width: 768px) {
   .notification {
-    width: auto;
+    width: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     max-width: 90%;
-    padding: 12px 20px;
-    font-size: 14px;
+    padding: 0 20px;
+    font-size: 16px;
     white-space: nowrap;
+  }
+  .notification.show{
+    width: 360px;
   }
   
   .notification-close {
-    font-size: 16px;
+    font-size: 45px;
   }
 }
 
 @media (max-width: 480px) {
   .notification {
     max-width: 95%;
-    padding: 10px 15px;
-    font-size: 13px;
+    padding: 0 15px;
+    font-size: 15px;
     gap: 10px;
   }
   
   .notification.show {
-    top: 50px;
+    top: 80px;
   }
 }
 
 @media (max-width: 360px) {
   .notification {
-    padding: 8px 12px;
-    font-size: 12px;
+    padding: 0 12px;
   }
 }

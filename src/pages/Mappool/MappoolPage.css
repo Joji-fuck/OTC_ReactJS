@@ -171,9 +171,14 @@
   background: #8cb9f8;
   color: #213a5e;
 }
+@media (max-width: 960px){
+  .mappool{
+    padding-top: 80px;
+  }
+}
 @media (max-width: 480px) {
   .mappool {
-    padding: var(--container-padding);
+    padding: 80px var(--container-padding) 0 var(--container-padding);
   }
 
   .summary {
