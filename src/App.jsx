@@ -18,6 +18,7 @@ import PlayersPage from "./pages/Players/PlayersPage.jsx";
 import RegulationsPage from "./pages/Regulations/RegulationPage.jsx";
 import StaffPage from "./pages/Staff/StaffPage.jsx";
 import NotFound from "./components/Not-found/NotFound.jsx";
+import Donate from "./components/donate/Donate.jsx";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -77,6 +78,7 @@ function App() {
           {loading && <Preloader/>}
           <Navbar/>
           <AnimatedRoutes />
+          <Donate/>
           <Footer />
         </main>
       </>

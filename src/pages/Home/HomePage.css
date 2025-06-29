@@ -114,6 +114,7 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    margin-bottom: 100px;
   }
   .registration-btn img {
     width: clamp(250px, 60vw, 320px);
