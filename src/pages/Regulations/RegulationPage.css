@@ -13,7 +13,6 @@
   background: white;
   color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
   transition: transform 0.2s;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
@@ -31,4 +30,16 @@
 }
 .bg-yellow{
   background: rgba(232, 214, 98, 0.3);
+}
+
+.regulation-list, .regulation-list li{
+  margin-top: 15px;
+  padding-left: 10px;
+}
+.regulation-list ul li{
+  list-style: disc;
+}
+.regulation-list ul{
+  margin-top: 20px;
+  padding-left: 10px;
 }
