@@ -1,77 +1,54 @@
+// middleware.js с логами для отладки
 
-const BOT_AGENTS = [
-    'googlebot',
-    'yahoo! slurp',
-    'bingbot',
-    'yandex',
-    'baiduspider',
-    'facebookexternalhit',
-    'twitterbot',
-    'rogerbot',
-    'linkedinbot',
-    'embedly',
-    'quora link preview',
-    'showyoubot',
-    'outbrain',
-    'pinterest/0.',
-    'developers.google.com/+/web/snippet',
-    'slackbot',
-    'vkshare',
-    'w3c_validator',
-    'redditbot',
-    'applebot',
-    'whatsapp',
-    'flipboard',
-    'tumblr',
-    'bitlybot',
-    'skypeuripreview',
-    'nuzzel',
-    'discordbot',
-    'google-read-aloud',
-    'google-inspectiontool',
-];
-
-const IGNORE_EXTENSIONS = [
-    '.js', '.css', '.xml', '.less', '.png', '.jpg', '.jpeg', '.gif',
-    '.pdf', '.doc', '.txt', '.ico', '.rss', '.zip', '.mp3', '.rar',
-    '.exe', '.wmv', '.doc', '.avi', '.ppt', '.mpg', '.mpeg', '.tif',
-    '.wav', '.mov', '.psd', '.ai', '.xls', '.mp4', '.m4a', '.swf',
-    '.dat', '.dmg', '.iso', '.flv', '.m4v', '.torrent', '.ttf', '.woff',
-    '.svg', '.woff2', '.eot'
-];
+const BOT_AGENTS = [ 'googlebot', 'bingbot', 'yandex', 'baiduspider', 'facebookexternalhit', 'twitterbot', 'slackbot', 'discordbot', 'google-inspectiontool' ];
+const IGNORE_EXTENSIONS = [ '.js', '.css', '.xml', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.pdf', '.zip' ];
 
 export async function middleware(request) {
     const userAgent = request.headers.get('user-agent')?.toLowerCase() || '';
     const url = request.nextUrl.clone();
 
-    if (
-        BOT_AGENTS.some(agent => userAgent.includes(agent)) &&
-        !IGNORE_EXTENSIONS.some(ext => url.pathname.includes(ext))
-    ) {
+    console.log(`[Middleware] Request received for: ${url.pathname}`);
+    console.log(`[Middleware] User-Agent: ${userAgent}`);
+
+    const isBot = BOT_AGENTS.some(agent => userAgent.includes(agent));
+    const isStaticFile = IGNORE_EXTENSIONS.some(ext => url.pathname.includes(ext));
+
+    if (isBot && !isStaticFile) {
+        console.log(`[Middleware] Bot detected! Prerendering for: ${request.url}`);
+
+        const prerenderToken = process.env.PRERENDER_TOKEN;
+        if (!prerenderToken) {
+            console.error('[Middleware] CRITICAL: PRERENDER_TOKEN is not set!');
+            return; // Просто выходим, если токена нет
+        }
+
         try {
             const prerenderUrl = `https://service.prerender.io/${request.url}`;
+            console.log(`[Middleware] Fetching from Prerender URL: ${prerenderUrl}`);
 
             const response = await fetch(prerenderUrl, {
-                headers: {
-                    'X-Prerender-Token': process.env.PRERENDER_TOKEN,
-                },
+                headers: { 'X-Prerender-Token': prerenderToken },
             });
 
+            console.log(`[Middleware] Prerender.io response status: ${response.status}`);
 
             if (!response.ok) {
-                console.error(`Prerender.io failed with status: ${response.status}`);
-                return;
+                console.error(`[Middleware] Prerender.io failed: ${response.statusText}`);
+                return; // Пропускаем, если Prerender не справился
             }
 
+            const body = await response.text();
+            console.log(`[Middleware] Prerender.io response body length: ${body.length}`);
 
-            return new Response(await response.text(), {
+            return new Response(body, {
                 status: response.status,
                 headers: { 'Content-Type': 'text/html; charset=utf-8' },
             });
 
         } catch (error) {
-            console.error('Error with Prerender.io middleware:', error);
+            console.error('[Middleware] Error during prerender fetch:', error);
         }
     }
 
+    console.log(`[Middleware] Not a bot or static file. Passing through.`);
 }
