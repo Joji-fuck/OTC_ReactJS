@@ -1,6 +1,7 @@
 import React from "react";
 import "./HomePage.css";
-import OsuButton from "../../assets/images/OsuButton.png";
+// import OsuButton from "../../assets/images/OsuButton.png";
+import OsuButton from "../../assets/images/OSU CUP LOGO.png";
 import Stesha from "../../assets/images/Stesha-2.png";
 import YuMoney from "../../assets/images/icon/io.svg";
 
