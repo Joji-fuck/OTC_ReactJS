@@ -5,26 +5,43 @@
       "destination": "/api/:path*"
     },
     {
-      "source": "/((?!api/|assets/|_next/|favicon.ico|sw.js).*)",
+      "source": "/((?!api/|assets/|_next/|favicon.ico|sw\\.js).*)",
       "has": [
         {
           "type": "header",
-          "key": "User-Agent",
+          "key": "user-agent",
           "value": ".*(YandexBot|Googlebot|Bingbot|Slurp|DuckDuckBot|facebookexternalhit|twitterbot|pinterest|prerender).*"
         }
       ],
       "destination": "https://service.prerender.io/https://osutyumencup.ru/$1"
     },
     {
-      "source": "/((?!api/|assets/|_next/|favicon.ico|sw.js).*)",
+      "source": "/((?!api/|assets/|_next/|favicon.ico|sw\\.js).*)",
       "destination": "/index.html"
     }
   ],
+
   "headers": [
+    {
+      "source": "/((?!api/|assets/|_next/|favicon.ico|sw\\.js).*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*(YandexBot|Googlebot|Bingbot|Slurp|DuckDuckBot|facebookexternalhit|twitterbot|pinterest|prerender).*"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Prerender-Token",
+          "value": "@PRERENDER_TOKEN"
+        }
+      ]
+    },
     {
       "source": "/api/(.*)",
       "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Origin",  "value": "*" },
         { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS" }
       ]
     }
