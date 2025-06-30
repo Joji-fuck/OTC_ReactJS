@@ -1,6 +1,6 @@
 import React from 'react';
 import './StaffPage.css';
-import staffIdList from '../../data/staff.json'; // Убедись, что файл называется staff.json
+import staffIdList from '../../data/players.json';
 import StaffCard from '../../components/staff-card/StaffCard.jsx';
 import { Helmet } from "react-helmet-async";
 import { useOsuPlayersList } from '../../hooks/useOsuPlayersList';
