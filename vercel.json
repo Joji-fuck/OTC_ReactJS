@@ -10,7 +10,7 @@
         {
           "type": "header",
           "key": "User-Agent",
-          "value": ".*(YandexBot|Googlebot|Bingbot|Slurp|DuckDuckBot|facebookexternalhit|twitterbot|pinterest).*"
+          "value": ".*(YandexBot|Googlebot|Bingbot|Slurp|DuckDuckBot|facebookexternalhit|twitterbot|pinterest|prerender).*"
         }
       ],
       "destination": "https://service.prerender.io/https://osutyumencup.ru/$1"
