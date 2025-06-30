@@ -1,25 +1,16 @@
-// src/components/player-card/PlayerCard.jsx
 import React from 'react';
-import { useOsuPlayer } from '../../hooks/useOsuPlayer';
 import './PlayerCard.css';
 
-const PlayerCard = ({ playerId }) => {
-    const { player, loading, error } = useOsuPlayer(playerId);
+const PlayerCard = ({ player }) => {
 
-    if (loading) {
-        return <div className="player-card loading">Загрузка...</div>;
-    }
-
-    if (error || !player) {
-        return <div className="player-card error">Ошибка загрузки: {error}</div>;
-    }
 
     return (
         <a
-            href={`https://osu.ppy.sh/users/${playerId}`}
+            href={`https://osu.ppy.sh/users/${player.id}`}
             className="player-card"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+        >
             <img
                 src={player.avatar_url}
                 alt={player.username}
