@@ -40,9 +40,7 @@ const MappoolPage = () => {
 
           <summary className="zip-maps">
               <a
-                  href="src\assets\mappool_OTC.zip"
-                  className="download-zip"
-                  download="mappool_OTC.zip"
+                  href="/assets/mappool_OTC.zip" className="download-zip" download="mappool_OTC.zip"
               >
                   Скачать зип-файл
               </a>
