@@ -8,7 +8,6 @@ import CS from "../../assets/images/icon/cs.svg";
 import AR from "../../assets/images/icon/ar.svg";
 import OD from "../../assets/images/icon/od.svg";
 import {Helmet} from "react-helmet-async";
-import {image} from "framer-motion/m";
 
 const MappoolPage = () => {
   const [openDetails, setOpenDetails] = useState(null);
