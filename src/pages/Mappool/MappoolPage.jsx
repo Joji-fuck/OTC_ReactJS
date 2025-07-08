@@ -655,7 +655,7 @@ const MappoolPage = () => {
           </div>
           <div className={`details ${openDetails === "tb" ? "open" : ""}`}>
               <div className="summary summary-gray" onClick={() => handleToggle("tb")}>
-                  Tiebraker
+                  Tiebreaker
               </div>
               <div className="content">
                   <a
