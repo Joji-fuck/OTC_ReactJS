@@ -131,13 +131,13 @@ const MappoolPage = () => {
                   </a>
                   <a
                       className="map-card map-card-blue"
-                      href="https://osu.ppy.sh/beatmapsets/1543431#osu/3154910"
+                      href="https://osu.ppy.sh/beatmapsets/2092275#osu/4385836"
                       onClick={handleMapClick}
                   >
                       <div className="map-img map-img-3">
-                          <h2>Prairie4</h2>
-                          <h3>PeriTune</h3>
-                          <h4>[Extra]</h4>
+                          <h2>The Terrorist</h2>
+                          <h3>Dustvoxx</h3>
+                          <h4>[Who Dares Wins]</h4>
                       </div>
                       <div className="map-mode">
                           <p>NM3</p>
@@ -145,24 +145,24 @@ const MappoolPage = () => {
                       <div className="map-stats">
                           <div className="map-stats-left">
                 <span>
-                  <img src={Star}/> 6.48
+                  <img src={Star}/> 6.32
                 </span>
                               <span>
-                  <img src={Bpm}/> 138
+                  <img src={Bpm}/> 125
                 </span>
                               <span>
-                  <img src={Time}/> 2:23
+                  <img src={Time}/> 3:58
                 </span>
                           </div>
                           <div className="map-stats-right">
                 <span>
-                  <img src={CS}/> 4.2
+                  <img src={CS}/> 4
                 </span>
                               <span>
-                  <img src={AR}/> 9.4
+                  <img src={AR}/> 9.6
                 </span>
                               <span>
-                  <img src={OD}/> 9
+                  <img src={OD}/> 8
                 </span>
                           </div>
                       </div>
