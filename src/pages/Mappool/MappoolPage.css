@@ -61,6 +61,9 @@
 .summary-yellow {
   background: #e8d662;
 }
+.summary-gray {
+  background: rgb(140, 140, 140);
+}
 .map-card {
   color: white;
   width: 95%;
@@ -111,6 +114,9 @@
 .map-card-yellow {
   background: rgba(232, 214, 98, 0.55);
 }
+.map-card-gray {
+  background: rgba(140, 140, 140, 0.55);
+}
 .map-mode {
   display: flex;
   justify-content: center;
@@ -121,10 +127,65 @@
 }
 .map-img {
   padding: 20px 0 20px 20px;
+  height: 100%;
   width: 70%;
-  background: url("../../assets/images/cover.jpg") no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
+.map-img-1{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/nm1.jpg");
+}
+.map-img-2{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/nm2.jpg");
+}
+.map-img-3{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/nm3.jpg");
+}
+.map-img-4{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/nm4.jpg");
+}
+.map-img-5{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/nm5.jpg");
+}
+.map-img-6{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/nm6.jpg");
+
+}
+.map-img-7{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/hd1.jpg");
+}
+.map-img-8{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/hd2.jpg");
+}
+.map-img-9{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/hd3.jpg");
+}
+
+.map-img-10{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/hr1.jpg");
+}
+.map-img-11{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/hr2.jpg");
+}
+.map-img-12{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/hr3.jpg");
+}
+
+.map-img-13{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/dt1.jpg");
+}
+.map-img-14{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/dt2.jpg");
+}
+.map-img-15{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/dt3.jpg");
+}
+
+.map-img-16{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/tb.jpg");
+}
+
 .map-stats {
   display: flex;
   justify-content: center;
