@@ -146,7 +146,6 @@
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/nm4.jpg");
 }
 .map-img-5{
-<<<<<<< HEAD
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/nm5.jpg");
 }
 .map-img-6{
@@ -186,26 +185,6 @@
 .map-img-16{
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/tb.jpg");
 }
-=======
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/hd1.jpg");
-}
-.map-img-6{
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/hd2.jpg");
-}
-.map-img-7{
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/hr1.jpg");
-}
-.map-img-8{
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/hr2.jpg");
-}
-.map-img-9{
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/dt1.jpg");
-}
-.map-img-10{
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/images/mappool/dt2.jpg");
-}
->>>>>>> e671fb43722488a11830e3a494da61442602dfce
-
 .map-stats {
   display: flex;
   justify-content: center;
